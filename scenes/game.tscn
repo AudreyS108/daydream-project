@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=6 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://4mjv1nbbv7mu" path="res://assets/Sprites/bg-4.png" id="1_yqjtg"]
@@ -6,6 +6,10 @@
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_lnu2h"]
+normal = Vector2(-1, 0)
+distance = -11.0
 
 [node name="Game" type="Node2D"]
 
@@ -20,10 +24,19 @@ position = Vector2(613, 38)
 position = Vector2(-4, -48)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(1, 0)
+limit_right = 970
 limit_bottom = 0
+limit_smoothed = true
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(7, 27)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(964, -161)
+shape = SubResource("WorldBoundaryShape2D_lnu2h")

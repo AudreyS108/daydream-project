@@ -18,7 +18,7 @@ scale = Vector2(0.557916, 0.61)
 texture = ExtResource("1_ktecv")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(222, -174)
+position = Vector2(226, -172)
 shape = SubResource("SegmentShape2D_lxrdf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
