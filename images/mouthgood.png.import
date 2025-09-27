@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bh4unrqgdmli5"
-path="res://.godot/imported/bg-2.png-c28ed032877dba9adbdf19603bae648e.ctex"
+uid="uid://xrqcwwugecif"
+path="res://.godot/imported/mouthgood.png-b0a5cc66a6f5539a1628f5135d6eb1ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/bg-2.png"
-dest_files=["res://.godot/imported/bg-2.png-c28ed032877dba9adbdf19603bae648e.ctex"]
+source_file="res://images/mouthgood.png"
+dest_files=["res://.godot/imported/mouthgood.png-b0a5cc66a6f5539a1628f5135d6eb1ed.ctex"]
 
 [params]
 
