@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdlo82xo2rusq"
-path="res://.godot/imported/carrot-removebg-preview.png-8b3685f330d23ac736a7a2a50c83c3d0.ctex"
+uid="uid://b50wx0ehccwkx"
+path="res://.godot/imported/Flying-Hotdog-evil.png-c90207bd7db6800fc3b8bba8c68c3110.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/carrot-removebg-preview.png"
-dest_files=["res://.godot/imported/carrot-removebg-preview.png-8b3685f330d23ac736a7a2a50c83c3d0.ctex"]
+source_file="res://assets/Sprites/Flying-Hotdog-evil.png"
+dest_files=["res://.godot/imported/Flying-Hotdog-evil.png-c90207bd7db6800fc3b8bba8c68c3110.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmc2m3k6dda81"
-path="res://.godot/imported/Titlescreen.png-1dae0e9bc23f1c83031b4203b4f4836e.ctex"
+uid="uid://bq56ml37uieqe"
+path="res://.godot/imported/BBQ-Sauce.png-6403eb00f45daee58beda7e1b7706d68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Titlescreen.png"
-dest_files=["res://.godot/imported/Titlescreen.png-1dae0e9bc23f1c83031b4203b4f4836e.ctex"]
+source_file="res://assets/Sprites/BBQ-Sauce.png"
+dest_files=["res://.godot/imported/BBQ-Sauce.png-6403eb00f45daee58beda7e1b7706d68.ctex"]
 
 [params]
 
