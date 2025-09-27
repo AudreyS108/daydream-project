@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cie7u13ou31r7"
-path="res://.godot/imported/Bush.png-7b83cfee28b18db0ea26c652c93b658c.ctex"
+uid="uid://hknxjh8vhw1a"
+path="res://.godot/imported/BBQ-Sauce.png-6403eb00f45daee58beda7e1b7706d68.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Bush.png"
-dest_files=["res://.godot/imported/Bush.png-7b83cfee28b18db0ea26c652c93b658c.ctex"]
+source_file="res://assets/Sprites/BBQ-Sauce.png"
+dest_files=["res://.godot/imported/BBQ-Sauce.png-6403eb00f45daee58beda7e1b7706d68.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bdlo82xo2rusq"
-path="res://.godot/imported/carrot-removebg-preview.png-8b3685f330d23ac736a7a2a50c83c3d0.ctex"
+uid="uid://2n5d4tr7xhjt"
+path="res://.godot/imported/BGFINAL.jpg-c7b17f8a04983ed0e80593eee3270286.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/carrot-removebg-preview.png"
-dest_files=["res://.godot/imported/carrot-removebg-preview.png-8b3685f330d23ac736a7a2a50c83c3d0.ctex"]
+source_file="res://assets/Sprites/BGFINAL.jpg"
+dest_files=["res://.godot/imported/BGFINAL.jpg-c7b17f8a04983ed0e80593eee3270286.ctex"]
 
 [params]
 

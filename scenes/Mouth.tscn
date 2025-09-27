@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=3 uid="uid://c2c6ebaepviij"]
 
-[ext_resource type="Texture2D" uid="uid://brlmuhve82pv3" path="res://images/gref.png" id="1_ktecv"]
+[ext_resource type="Texture2D" uid="uid://bke5tk3ia2pf4" path="res://images/gref.png" id="1_ktecv"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lxrdf"]
 a = Vector2(116, 3)

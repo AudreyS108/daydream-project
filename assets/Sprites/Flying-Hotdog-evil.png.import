@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dmc2m3k6dda81"
-path="res://.godot/imported/Titlescreen.png-1dae0e9bc23f1c83031b4203b4f4836e.ctex"
+uid="uid://b50wx0ehccwkx"
+path="res://.godot/imported/Flying-Hotdog-evil.png-c90207bd7db6800fc3b8bba8c68c3110.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/Titlescreen.png"
-dest_files=["res://.godot/imported/Titlescreen.png-1dae0e9bc23f1c83031b4203b4f4836e.ctex"]
+source_file="res://assets/Sprites/Flying-Hotdog-evil.png"
+dest_files=["res://.godot/imported/Flying-Hotdog-evil.png-c90207bd7db6800fc3b8bba8c68c3110.ctex"]
 
 [params]
 
