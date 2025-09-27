@@ -30,8 +30,12 @@ limit_bottom = 0
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, 27)
+=======
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+>>>>>>> Stashed changes
 =======
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 >>>>>>> Stashed changes
