@@ -25,7 +25,7 @@ position = Vector2(7, 27)
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Mouth" type="Sprite2D" parent="."]
 position = Vector2(779, -177)
 scale = Vector2(0.2084656, 0.22688779)
 texture = ExtResource("3_lnu2h")
