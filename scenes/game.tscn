@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://lhoagjgbcmbs"]
 
+[ext_resource type="Texture2D" uid="uid://cs4ob58yo7gep" path="res://assets/Sprites/BGFINAL.jpeg" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
-[ext_resource type="Texture2D" uid="uid://4mjv1nbbv7mu" path="res://assets/Sprites/bg-4.png" id="1_yqjtg"]
 [ext_resource type="PackedScene" uid="uid://c2c6ebaepviij" path="res://scenes/Mouth.tscn" id="3_lnu2h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
@@ -13,9 +13,10 @@ distance = -11.0
 
 [node name="Game" type="Node2D"]
 
-[node name="Background" type="Sprite2D" parent="."]
-position = Vector2(5, -536)
-texture = ExtResource("1_yqjtg")
+[node name="Bgfinal" type="Sprite2D" parent="."]
+position = Vector2(3.55555, -541)
+scale = Vector2(2.31624, 2.31624)
+texture = ExtResource("1_lnu2h")
 
 [node name="Mouth" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(613, 38)
