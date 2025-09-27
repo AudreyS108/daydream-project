@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=5 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="Texture2D" uid="uid://4mjv1nbbv7mu" path="res://assets/Sprites/bg-4.png" id="1_yqjtg"]
+[ext_resource type="PackedScene" uid="uid://c2c6ebaepviij" path="res://scenes/Mouth.tscn" id="3_lnu2h"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
@@ -9,34 +10,20 @@ distance = 28.0
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(-1917, -536)
-texture = ExtResource("1_yqjtg")
-
-[node name="Background" type="Sprite2D" parent="Background"]
-position = Vector2(1918, -1)
-texture = ExtResource("1_yqjtg")
-
-[node name="Background" type="Sprite2D" parent="Background/Background"]
-position = Vector2(1918, -1)
+position = Vector2(5, -536)
 texture = ExtResource("1_yqjtg")
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(0, -81)
+position = Vector2(-4, -48)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(2, -4)
 limit_bottom = 0
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(7, 27)
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
-position = Vector2(0, 27)
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
->>>>>>> Stashed changes
-=======
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
->>>>>>> Stashed changes
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
+
+[node name="Mouth" parent="." instance=ExtResource("3_lnu2h")]
+position = Vector2(-516, -247)
