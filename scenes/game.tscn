@@ -9,15 +9,17 @@ distance = 28.0
 [node name="Game" type="Node2D"]
 
 [node name="Background" type="Sprite2D" parent="."]
-position = Vector2(-9, -499)
+position = Vector2(5, -536)
 texture = ExtResource("1_yqjtg")
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(-4, -48)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-limit_bottom = 50
+limit_bottom = 0
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(7, 70)
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(7, 27)
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
