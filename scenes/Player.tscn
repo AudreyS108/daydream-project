@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqxcdhfp1tm65"]
+[gd_scene load_steps=12 format=3 uid="uid://cqxcdhfp1tm65"]
 
 [ext_resource type="Script" uid="uid://cll0wm4eiwo6q" path="res://scripts/player.gd" id="1_3li8b"]
 [ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="2_3li8b"]
 [ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="2_mdl7e"]
-[ext_resource type="Script" uid="uid://b7birt7wajyuv" path="res://scenes/animated_sprite_2d.gd" id="5_qu4a1"]
+[ext_resource type="Script" uid="uid://b7birt7wajyuv" path="res://scripts/animated_sprite_2d.gd" id="5_qu4a1"]
 [ext_resource type="AudioStream" uid="uid://vsx8h2xnqsi" path="res://assets/Sounds/crunchie mm.mp3" id="6_70d11"]
+[ext_resource type="Script" uid="uid://biydodd5saaek" path="res://scenes/attack_area.gd" id="7_cw2d6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mdl7e"]
 animations = [{
@@ -44,12 +45,13 @@ script = ExtResource("1_3li8b")
 position = Vector2(9, -103)
 scale = Vector2(0.499349, 0.499349)
 sprite_frames = SubResource("SpriteFrames_mdl7e")
-animation = &"Idle"
+animation = &"Holding"
 autoplay = "Idle"
 script = ExtResource("5_qu4a1")
 
 [node name="AudioStreamPlayer1" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
 stream = SubResource("AudioStream_qu4a1")
+volume_db = -10.895
 autoplay = true
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer2D" parent="AnimatedSprite2D"]
@@ -59,6 +61,7 @@ volume_db = 8.914
 [node name="AttackArea" type="Area2D" parent="AnimatedSprite2D"]
 position = Vector2(-18.0235, 206.269)
 scale = Vector2(2.00261, 2.00261)
+script = ExtResource("7_cw2d6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D/AttackArea"]
 position = Vector2(-4.25, -50)
@@ -67,3 +70,5 @@ shape = SubResource("RectangleShape2D_mdl7e")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(10.5, -51.75)
 shape = SubResource("RectangleShape2D_v6fml")
+
+[connection signal="body_entered" from="AnimatedSprite2D/AttackArea" to="." method="_on_attack_area_body_entered"]

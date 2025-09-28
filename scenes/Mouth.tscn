@@ -34,7 +34,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"W ketchup",
-"speed": 2.0
+"speed": 3.0
 }]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lxrdf"]
@@ -55,10 +55,9 @@ b = Vector2(-98, 119)
 position = Vector2(339, -240)
 scale = Vector2(0.612292, 0.619792)
 sprite_frames = SubResource("SpriteFrames_1p50c")
-animation = &"Default"
-autoplay = "Default"
-frame = 1
-frame_progress = 0.326865
+animation = &"W ketchup"
+autoplay = "W ketchup"
+frame_progress = 0.567726
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(197, -121)
