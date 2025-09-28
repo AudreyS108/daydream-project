@@ -24,9 +24,6 @@ animations = [{
 "texture": ExtResource("1_lxrdf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_lxrdf")
-}, {
-"duration": 1.0,
 "texture": ExtResource("2_v5odg")
 }, {
 "duration": 1.0,
@@ -37,7 +34,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"W ketchup",
-"speed": 2.0
+"speed": 3.0
 }]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lxrdf"]
@@ -52,7 +49,7 @@ b = Vector2(-33, 6)
 a = Vector2(-70, -58)
 b = Vector2(-98, 119)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[node name="mouth" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(339, -240)
@@ -60,7 +57,7 @@ scale = Vector2(0.612292, 0.619792)
 sprite_frames = SubResource("SpriteFrames_1p50c")
 animation = &"W ketchup"
 autoplay = "W ketchup"
-frame_progress = 0.462864
+frame_progress = 0.567726
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(197, -121)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vibpv7vmvkc"
+path="res://.godot/imported/nono (2).mp3-cce21c14e93378bbc65fa4b583161555.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/nono (2).mp3"
+dest_files=["res://.godot/imported/nono (2).mp3-cce21c14e93378bbc65fa4b583161555.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
