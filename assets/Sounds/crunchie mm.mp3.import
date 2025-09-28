@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://vsx8h2xnqsi"
+path="res://.godot/imported/crunchie mm.mp3-f810db45a8ce20d3659e5a24f68d7550.mp3str"
+
+[deps]
+
+source_file="res://assets/Sounds/crunchie mm.mp3"
+dest_files=["res://.godot/imported/crunchie mm.mp3-f810db45a8ce20d3659e5a24f68d7550.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

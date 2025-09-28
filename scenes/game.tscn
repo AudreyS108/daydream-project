@@ -81,7 +81,7 @@ offset_top = -646.0
 offset_right = 396.0
 offset_bottom = -413.0
 
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_p57ef")
 autoplay = true
 
