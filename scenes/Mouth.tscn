@@ -1,6 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://c2c6ebaepviij"]
+[gd_scene load_steps=7 format=3 uid="uid://c2c6ebaepviij"]
 
-[ext_resource type="Texture2D" uid="uid://bke5tk3ia2pf4" path="res://images/gref.png" id="1_ktecv"]
+[ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="1_lxrdf"]
+[ext_resource type="Texture2D" uid="uid://be8or0svac7ht" path="res://assets/Sprites/sr5z1ccc697459aws3.png" id="2_v5odg"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lxrdf"]
 a = Vector2(116, 3)
@@ -10,12 +11,25 @@ b = Vector2(3, 0)
 a = Vector2(184, -183)
 b = Vector2(-33, 6)
 
-[node name="CharacterBody2D" type="CharacterBody2D"]
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ktecv"]
+a = Vector2(-131, -53)
+b = Vector2(-98, 119)
 
-[node name="Mouth" type="Sprite2D" parent="."]
-position = Vector2(318, -238)
-scale = Vector2(0.557916, 0.61)
-texture = ExtResource("1_ktecv")
+[sub_resource type="SpriteFrames" id="SpriteFrames_1p50c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lxrdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_v5odg")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(226, -172)
@@ -24,3 +38,13 @@ shape = SubResource("SegmentShape2D_lxrdf")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
 position = Vector2(41, 11)
 shape = SubResource("SegmentShape2D_v5odg")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
+position = Vector2(430, -292)
+shape = SubResource("SegmentShape2D_ktecv")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(339, -240)
+scale = Vector2(0.612292, 0.619792)
+sprite_frames = SubResource("SpriteFrames_1p50c")
+autoplay = "default"
