@@ -2,7 +2,10 @@ extends CharacterBody2D
 
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const JUMP_VELOCITY = -500.0
+
+@onready var animation_player = $AnimationPlayer
+
 
 
 func _physics_process(delta: float) -> void:
@@ -27,5 +30,9 @@ func _physics_process(delta: float) -> void:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 		
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("Attack"):
+		animation_player.play("Holding")
+		
 	move_and_slide()
 	

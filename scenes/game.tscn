@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=13 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://dea3lfsr5r6cv" path="res://scripts/camera_2d.gd" id="4_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://c1pap1asc3qgs" path="res://assets/Sounds/happy-kids-background-music-364459.mp3" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dhhbfjk26kyko" path="res://scenes/otherhotdogs.tscn" id="8_gee14"]
+[ext_resource type="Texture2D" uid="uid://0ttatly65po4" path="res://assets/Sprites/F Sign.png" id="9_0tnpc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
@@ -34,7 +35,7 @@ texture = ExtResource("1_lnu2h")
 position = Vector2(596, 41)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(-4, -48)
+position = Vector2(412, -48)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-3, -48)
@@ -42,11 +43,6 @@ limit_right = 970
 limit_bottom = 0
 limit_smoothed = true
 script = ExtResource("4_u5sy4")
-
-[node name="Objective" type="Sprite2D" parent="Player/Camera2D"]
-position = Vector2(5, -434)
-scale = Vector2(0.798246, 0.798246)
-texture = ExtResource("4_lbhrr")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(7, 27)
@@ -61,6 +57,10 @@ position = Vector2(964, -161)
 shape = SubResource("WorldBoundaryShape2D_lnu2h")
 
 [node name="MarginContainer" parent="." instance=ExtResource("4_iywne")]
+offset_left = -1331.0
+offset_top = -645.0
+offset_right = -190.0
+offset_bottom = 1.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
@@ -87,4 +87,14 @@ position = Vector2(-2841, -400)
 shape = SubResource("WorldBoundaryShape2D_p57ef")
 
 [node name="CharacterBody2D" parent="." instance=ExtResource("8_gee14")]
-position = Vector2(-751, -76)
+position = Vector2(-344, -73)
+
+[node name="Objective" type="Sprite2D" parent="."]
+position = Vector2(300, -503)
+scale = Vector2(0.798246, 0.798246)
+texture = ExtResource("4_lbhrr")
+
+[node name="FSign" type="Sprite2D" parent="."]
+position = Vector2(-215, -210)
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("9_0tnpc")
