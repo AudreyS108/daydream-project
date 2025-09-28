@@ -40,7 +40,7 @@ script = ExtResource("1_3li8b")
 position = Vector2(9, -103)
 scale = Vector2(0.499349, 0.499349)
 sprite_frames = SubResource("SpriteFrames_mdl7e")
-animation = &"Idle"
+animation = &"Holding"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -50,5 +50,5 @@ shape = SubResource("RectangleShape2D_v6fml")
 [node name="AttackArea" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
-position = Vector2(11, -50)
+position = Vector2(-4.25, -50)
 shape = SubResource("RectangleShape2D_mdl7e")
