@@ -2,6 +2,8 @@ extends AnimatedSprite2D
 
 
 @onready var animation_player = $AnimationPlayer
+func wait(seconds: float) -> void:
+	await get_tree().create_timer(seconds).timeout
 
 func _input(event):
 	# Check if the specified key is pressed (e.g., "F" key)
@@ -10,8 +12,10 @@ func _input(event):
 			flip_h = true  # Toggle horizontal flip
 		if event.keycode == KEY_LEFT:  # Replace KEY_F with your desired key
 			flip_h = false  # Toggle horizontal flip
-		if event.keycode == KEY_F:
-			animation_player.play("Holding")
+		if event.keycode == KEY_F: # and is colliding with hotdog ADD
+			self.play("Holding")
+			
+		
 
 # Called when the node enters the scene tree for the first time.
 # 10 9 8 7 6 ... thing on animation?
