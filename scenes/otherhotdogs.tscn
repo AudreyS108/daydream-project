@@ -3,7 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://b2imbiapgxkrg" path="res://assets/Sprites/PlayerKetchup.png" id="1_iknsw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vkb38"]
-size = Vector2(76.5, 104.5)
+size = Vector2(76.5, 152)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 
@@ -13,5 +13,5 @@ scale = Vector2(0.416667, 0.416667)
 texture = ExtResource("1_iknsw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(2, 19.75)
+position = Vector2(2, -4)
 shape = SubResource("RectangleShape2D_vkb38")
