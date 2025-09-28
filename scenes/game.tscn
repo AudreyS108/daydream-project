@@ -31,6 +31,11 @@ texture = ExtResource("1_lnu2h")
 position = Vector2(14, -533)
 texture = ExtResource("1_lnu2h")
 
+[node name="FSign" type="Sprite2D" parent="."]
+position = Vector2(-215, -210)
+scale = Vector2(2.75, 2.75)
+texture = ExtResource("9_0tnpc")
+
 [node name="Mouth" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(596, 41)
 
@@ -86,15 +91,10 @@ autoplay = true
 position = Vector2(-2841, -400)
 shape = SubResource("WorldBoundaryShape2D_p57ef")
 
-[node name="CharacterBody2D" parent="." instance=ExtResource("8_gee14")]
+[node name="OtherHotdog" parent="." instance=ExtResource("8_gee14")]
 position = Vector2(-344, -73)
 
 [node name="Objective" type="Sprite2D" parent="."]
 position = Vector2(300, -503)
 scale = Vector2(0.798246, 0.798246)
 texture = ExtResource("4_lbhrr")
-
-[node name="FSign" type="Sprite2D" parent="."]
-position = Vector2(-215, -210)
-scale = Vector2(2.75, 2.75)
-texture = ExtResource("9_0tnpc")

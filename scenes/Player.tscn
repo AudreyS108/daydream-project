@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://cqxcdhfp1tm65"]
+[gd_scene load_steps=11 format=3 uid="uid://cqxcdhfp1tm65"]
 
 [ext_resource type="Script" uid="uid://cll0wm4eiwo6q" path="res://scripts/player.gd" id="1_3li8b"]
 [ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="2_3li8b"]
 [ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="2_mdl7e"]
+[ext_resource type="Script" uid="uid://b7birt7wajyuv" path="res://scenes/animated_sprite_2d.gd" id="5_qu4a1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mdl7e"]
 animations = [{
@@ -27,6 +28,23 @@ animations = [{
 "speed": 3.0
 }]
 
+[sub_resource type="Animation" id="Animation_qu4a1"]
+resource_name = "new_animation"
+markers = [{
+"color": Color(1, 1, 1, 1),
+"name": &"new_marker",
+"time": 0.01
+}, {
+"color": Color(1, 1, 1, 1),
+"name": &"new_marker_2",
+"time": 0.97
+}]
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_70d11"]
+_data = {
+&"new_animation": SubResource("Animation_qu4a1")
+}
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
 size = Vector2(77, 112.5)
 
@@ -42,6 +60,13 @@ scale = Vector2(0.499349, 0.499349)
 sprite_frames = SubResource("SpriteFrames_mdl7e")
 animation = &"Holding"
 autoplay = "Idle"
+script = ExtResource("5_qu4a1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="AnimatedSprite2D"]
+libraries = {
+&"": SubResource("AnimationLibrary_70d11")
+}
+autoplay = "new_animation"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(20.5, -15.75)
