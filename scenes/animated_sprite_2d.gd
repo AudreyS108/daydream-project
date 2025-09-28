@@ -1,40 +1,46 @@
 extends AnimatedSprite2D
 
-@onready var audio_player = $AudioStreamPlayer1
-@onready var animation_player = $AnimationPlayer
+@onready var audio_player1 = $AudioStreamPlayer1
 @onready var collisionarea = $hotdog
+@onready var audio_player2 = $AudioStreamPlayer2
+
+var is_colliding_with_hotdog = false
+
+func _ready() -> void:
+	if collisionarea:
+		collisionarea.body_entered.connect(on_hotdog_body_entered)
+		
+func on_hotdog_body_entered(body: Node) -> void:
+	# Check if the collided body is named "otherhotdog"
+	if body.name == "otherhotdog":
+		is_colliding_with_hotdog = true
+		print("collided")
+	else:
+		print("not collided")
 
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout
 
 func _input(event):
-	# Check if the specified key is pressed (e.g., "F" key)
+	
 	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode == KEY_RIGHT:  # Replace KEY_F with your desired key
-			flip_h = true  # Toggle horizontal flip
-		if event.keycode == KEY_LEFT:  # Replace KEY_F with your desired key
-			flip_h = false  # Toggle horizontal flip
-		if event.keycode == KEY_F: # and is colliding with hotdog ADD
+		if event.keycode == KEY_RIGHT: 
+			flip_h = true  
+		if event.keycode == KEY_LEFT:  
+			flip_h = false  
+		if event.keycode == KEY_F and is_colliding_with_hotdog: # and is colliding with hotdog ADD
+			self.play("Holding")
+			audio_player1.stream = load("res://assets/Sounds/nono (1).mp3")
+			audio_player1.play()
+		elif event.keycode == KEY_F and is_colliding_with_hotdog == false:
+			self.play("Idle")
 			
-				self.play("Holding")
-				audio_player.stream = load("res://assets/Sounds/nono (1).mp3")
-				audio_player.play()
 		if event.keycode == KEY_X and self.is_playing() == true:
 			self.play("Idle")
-			audio_player.stop()
+			audio_player1.stop()
+			audio_player2.stream = load("res://assets/Sounds/crunchie mm.mp3")
+			audio_player2.play()
 			
-		
-func collideWithhotdog() -> bool:
-	if collisionarea:
-		for body in collisionarea.get_overlapping_bodies():
-			if body.is_in_group("otherhotdogs"):
-				body.get_parent().queue_free()
-				return true
-	else:
-		push_error("Area2D node not found!")
-	return false
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(_delta: float) -> void:
+func _process(delta: float) -> void:
 	pass
