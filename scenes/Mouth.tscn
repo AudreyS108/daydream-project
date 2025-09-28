@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c2c6ebaepviij"]
+[gd_scene load_steps=10 format=3 uid="uid://c2c6ebaepviij"]
 
 [ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="1_lxrdf"]
 [ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="2_1p50c"]
 [ext_resource type="Texture2D" uid="uid://be8or0svac7ht" path="res://assets/Sprites/sr5z1ccc697459aws3.png" id="2_v5odg"]
+[ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="4_1p50c"]
+[ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="5_1acxj"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lxrdf"]
 a = Vector2(116, 3)
@@ -34,7 +36,16 @@ animations = [{
 "texture": ExtResource("1_lxrdf")
 }, {
 "duration": 1.0,
+"texture": ExtResource("1_lxrdf")
+}, {
+"duration": 1.0,
 "texture": ExtResource("2_v5odg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1p50c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_1acxj")
 }],
 "loop": true,
 "name": &"W ketchup",
@@ -59,5 +70,6 @@ shape = SubResource("SegmentShape2D_ktecv")
 position = Vector2(339, -240)
 scale = Vector2(0.612292, 0.619792)
 sprite_frames = SubResource("SpriteFrames_1p50c")
-animation = &"Default"
-autoplay = "Default"
+animation = &"W ketchup"
+autoplay = "W ketchup"
+frame_progress = 0.811306
