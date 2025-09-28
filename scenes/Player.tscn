@@ -1,11 +1,20 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqxcdhfp1tm65"]
+[gd_scene load_steps=8 format=3 uid="uid://cqxcdhfp1tm65"]
 
 [ext_resource type="Script" uid="uid://cll0wm4eiwo6q" path="res://scripts/player.gd" id="1_3li8b"]
 [ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="2_3li8b"]
+[ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="2_mdl7e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mdl7e"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_mdl7e")
+}],
+"loop": true,
+"name": &"Holding",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_v6fml")
@@ -19,17 +28,27 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
-size = Vector2(40.75, 70)
+size = Vector2(77, 112.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mdl7e"]
+size = Vector2(150.5, 185)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_3li8b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-scale = Vector2(0.255208, 0.255208)
+position = Vector2(9, -103)
+scale = Vector2(0.499349, 0.499349)
 sprite_frames = SubResource("SpriteFrames_mdl7e")
 animation = &"Idle"
 autoplay = "Idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(4.625, 12)
+position = Vector2(20.5, -15.75)
 shape = SubResource("RectangleShape2D_v6fml")
+
+[node name="AttackArea" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AttackArea"]
+position = Vector2(11, -50)
+shape = SubResource("RectangleShape2D_mdl7e")
