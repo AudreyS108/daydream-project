@@ -3,12 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://c2c6ebaepviij" path="res://scenes/Mouth.tscn" id="3_lnu2h"]
-[ext_resource type="PackedScene" uid="uid://dojyycnmmk7rk" path="res://scenes/margin_container.tscn" id="4_iywne"]
 [ext_resource type="Texture2D" uid="uid://bx6b2vp42g03i" path="res://assets/Sprites/Screenshot_28-9-2025_121635_www.canva.com-removebg-preview.png" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://dea3lfsr5r6cv" path="res://scripts/camera_2d.gd" id="4_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://c1pap1asc3qgs" path="res://assets/Sounds/happy-kids-background-music-364459.mp3" id="6_p57ef"]
 [ext_resource type="PackedScene" uid="uid://dhhbfjk26kyko" path="res://scenes/otherhotdogs.tscn" id="8_gee14"]
 [ext_resource type="Texture2D" uid="uid://0ttatly65po4" path="res://assets/Sprites/F Sign.png" id="9_0tnpc"]
+[ext_resource type="Texture2D" uid="uid://dmr0oy2ajpwai" path="res://assets/Sprites/X Sign.png" id="10_vtaks"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
@@ -32,7 +32,7 @@ position = Vector2(14, -533)
 texture = ExtResource("1_lnu2h")
 
 [node name="FSign" type="Sprite2D" parent="."]
-position = Vector2(-215, -210)
+position = Vector2(-215, -247)
 scale = Vector2(2.75, 2.75)
 texture = ExtResource("9_0tnpc")
 
@@ -49,6 +49,15 @@ limit_bottom = 0
 limit_smoothed = true
 script = ExtResource("4_u5sy4")
 
+[node name="Label" type="Label" parent="Player/Camera2D"]
+offset_left = -223.0
+offset_top = -164.0
+offset_right = 246.0
+offset_bottom = -111.0
+theme_override_font_sizes/font_size = 30
+text = "Remaining Hotdogs: __"
+horizontal_alignment = 1
+
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(7, 27)
 
@@ -61,29 +70,8 @@ shape = SubResource("WorldBoundaryShape2D_yqjtg")
 position = Vector2(964, -161)
 shape = SubResource("WorldBoundaryShape2D_lnu2h")
 
-[node name="MarginContainer" parent="." instance=ExtResource("4_iywne")]
-offset_left = -1331.0
-offset_top = -645.0
-offset_right = -190.0
-offset_bottom = 1.0
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="Label" type="Label" parent="CanvasLayer"]
-offset_left = -331.0
-offset_top = -635.0
-offset_right = 317.0
-offset_bottom = -480.0
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = -401.0
-offset_top = -646.0
-offset_right = 396.0
-offset_bottom = -413.0
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+[node name="AudioStreamPlayer1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_p57ef")
-autoplay = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
@@ -91,10 +79,18 @@ autoplay = true
 position = Vector2(-2841, -400)
 shape = SubResource("WorldBoundaryShape2D_p57ef")
 
-[node name="OtherHotdog" parent="." instance=ExtResource("8_gee14")]
+[node name="Hotdog2" parent="." instance=ExtResource("8_gee14")]
 position = Vector2(-344, -73)
 
 [node name="Objective" type="Sprite2D" parent="."]
 position = Vector2(300, -503)
 scale = Vector2(0.798246, 0.798246)
 texture = ExtResource("4_lbhrr")
+
+[node name="XSign" type="Sprite2D" parent="."]
+position = Vector2(569.25, -302.25)
+scale = Vector2(2.70833, 2.65833)
+texture = ExtResource("10_vtaks")
+
+[node name="Hotdog" parent="." instance=ExtResource("8_gee14")]
+position = Vector2(-710, -74)
