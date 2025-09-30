@@ -42,25 +42,6 @@ texture = ExtResource("9_0tnpc")
 [node name="Mouth" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(596, 41)
 
-[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(412, -48)
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-3, -48)
-limit_right = 970
-limit_bottom = 0
-limit_smoothed = true
-script = ExtResource("4_u5sy4")
-
-[node name="Label" type="Label" parent="Player/Camera2D"]
-offset_left = -223.0
-offset_top = -164.0
-offset_right = 246.0
-offset_bottom = -111.0
-theme_override_font_sizes/font_size = 30
-text = "Hotdogs sacrificed:"
-horizontal_alignment = 1
-
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(7, 27)
 
@@ -75,6 +56,7 @@ shape = SubResource("WorldBoundaryShape2D_lnu2h")
 
 [node name="AudioStreamPlayer1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("6_p57ef")
+volume_db = -2.971
 autoplay = true
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
@@ -107,5 +89,26 @@ position = Vector2(-153, -249)
 scale = Vector2(1.31771, 1.32133)
 texture = ExtResource("12_dinhu")
 
+[node name="Player" parent="." instance=ExtResource("1_uwrxv")]
+position = Vector2(412, -48)
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(-3, -48)
+limit_right = 970
+limit_bottom = 0
+limit_smoothed = true
+script = ExtResource("4_u5sy4")
+
+[node name="Label" type="Label" parent="Player/Camera2D"]
+offset_left = -240.0
+offset_top = -207.0
+offset_right = 229.0
+offset_bottom = -154.0
+theme_override_font_sizes/font_size = 30
+text = "Hotdogs sacrificed:"
+horizontal_alignment = 1
+
 [connection signal="body_entered" from="Area2D" to="Player" method="_on_area_2d_body_entered"]
+[connection signal="body_exited" from="Area2D" to="Player" method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Area2D2" to="Player" method="_on_area_2d_2_body_entered"]
+[connection signal="body_exited" from="Area2D2" to="Player" method="_on_area_2d_2_body_exited"]
