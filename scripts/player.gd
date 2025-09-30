@@ -25,6 +25,16 @@ func _on_area_2d_2_body_entered(body: Node2D) -> void:
 		print("Player entered the area2!")
 		is_colliding_with_area2d2 = true
 
+func _on_area_2d_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		print("Player exited the area!")
+		is_colliding_with_area2d = false
+
+func _on_area_2d_2_body_exited(body: Node2D) -> void:
+	if body.name == "Player":
+		print("Player exited the area!")
+		is_colliding_with_area2d2 = false
+
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	if not is_on_floor():
@@ -58,23 +68,29 @@ func _input(event):
 			sprite.flip_h = false  
 			
 		if event.keycode == KEY_F and is_colliding_with_area2d: # and is colliding with hotdog ADD
+			if event.keycode == KEY_F and is_colliding_with_area2d == false:
+				sprite.play("Idle")
 			sprite.play("Holding")
-			sacrifices = sacrifices + 1
 			audio_player1.stream = load("res://assets/Sounds/nono (1).mp3")
 			audio_player1.play()
-			label.text = "Hotdogs sacrificed: " + str(sacrifices)
-			print("text set")
 			
-		elif event.keycode == KEY_F and is_colliding_with_area2d == false:
-			sprite.play("Idle")
-			
-		if event.keycode == KEY_X and sprite.is_playing() == true and is_colliding_with_area2d2 == true:
-			
-			sprite.play("Idle")
-			audio_player1.stop()
-			audio_player2.stream = load("res://assets/Sounds/crunchie mm.mp3")
-			audio_player2.play()
-			
+		if event.keycode == KEY_X:
+			if is_colliding_with_area2d2 == false:
+				sacrifices = sacrifices
+				label.text = "Hotdogs sacrificed: " + str(sacrifices)
+			if is_colliding_with_area2d2 == true : #and sprite.animation == "Holding"
+				sprite.play("Idle")
+				audio_player1.stop()
+				audio_player2.stream = load("res://assets/Sounds/crunchie mm.mp3")
+				audio_player2.play()
+				sacrifices = sacrifices + 1
+				print("text set")
+				label.text = "Hotdogs sacrificed: " + str(sacrifices)
+				is_colliding_with_area2d2 = false
+		
+		
+		
+		
 		
 	
 		
