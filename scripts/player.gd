@@ -5,8 +5,8 @@ const SPEED = 300.0
 const JUMP_VELOCITY = -500.0
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
-@onready var audio_player1: AudioStreamPlayer2D = $AnimatedSprite2D/AudioStreamPlayer1
-@onready var audio_player2: AudioStreamPlayer2D = $AnimatedSprite2D/AudioStreamPlayer2
+@onready var audio_player1: AudioStreamPlayer2D = $AudioStreamPlayer1
+@onready var audio_player2: AudioStreamPlayer2D = $AudioStreamPlayer2
 @onready var collisionarea: Area2D = $AnimatedSprite2D/hotdog
 @onready var label: Label = $Camera2D/Label
 
@@ -78,6 +78,7 @@ func _input(event):
 			if is_colliding_with_area2d2 == false:
 				sacrifices = sacrifices
 				label.text = "Hotdogs sacrificed: " + str(sacrifices)
+				audio_player2.stop()
 			if is_colliding_with_area2d2 == true : #and sprite.animation == "Holding"
 				sprite.play("Idle")
 				audio_player1.stop()
