@@ -74,19 +74,21 @@ func _input(event):
 			audio_player1.stream = load("res://assets/Sounds/nono (1).mp3")
 			audio_player1.play()
 			
-			
+		if event.keycode == KEY_X:
+			if is_colliding_with_area2d2 == false:
+				sacrifices = sacrifices
+				label.text = "Hotdogs sacrificed: " + str(sacrifices)
+			if is_colliding_with_area2d2 == true : #and sprite.animation == "Holding"
+				sprite.play("Idle")
+				audio_player1.stop()
+				audio_player2.stream = load("res://assets/Sounds/crunchie mm.mp3")
+				audio_player2.play()
+				sacrifices = sacrifices + 1
+				print("text set")
+				label.text = "Hotdogs sacrificed: " + str(sacrifices)
+				is_colliding_with_area2d2 = false
 		
-			
-		if event.keycode == KEY_X and sprite.is_playing() == true and is_colliding_with_area2d2 == true:
-			if event.keycode == KEY_X and is_colliding_with_area2d2 == false:
-				sprite.play("Holding")
-			sprite.play("Idle")
-			audio_player1.stop()
-			audio_player2.stream = load("res://assets/Sounds/crunchie mm.mp3")
-			audio_player2.play()
-			sacrifices = sacrifices + 1
-			print("text set")
-			label.text = "Hotdogs sacrificed: " + str(sacrifices)
+		
 		
 		
 		
