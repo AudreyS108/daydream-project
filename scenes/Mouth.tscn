@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="1_lxrdf"]
 [ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="2_1p50c"]
-[ext_resource type="Texture2D" uid="uid://be8or0svac7ht" path="res://assets/Sprites/sr5z1ccc697459aws3.png" id="2_v5odg"]
+[ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="3_1acxj"]
 [ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="4_1p50c"]
 [ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="5_1acxj"]
 
@@ -24,7 +24,7 @@ animations = [{
 "texture": ExtResource("1_lxrdf")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_v5odg")
+"texture": ExtResource("3_1acxj")
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_1p50c")
@@ -57,7 +57,8 @@ scale = Vector2(0.612292, 0.619792)
 sprite_frames = SubResource("SpriteFrames_1p50c")
 animation = &"W ketchup"
 autoplay = "W ketchup"
-frame_progress = 0.567726
+frame = 1
+frame_progress = 0.11684782
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(197, -121)

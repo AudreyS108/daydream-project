@@ -12,7 +12,7 @@ dest_files=["res://.godot/imported/crunchie mm.mp3-f810db45a8ce20d3659e5a24f68d7
 
 [params]
 
-loop=false
+loop=true
 loop_offset=0
 bpm=0
 beat_count=0
