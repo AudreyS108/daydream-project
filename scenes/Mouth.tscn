@@ -33,7 +33,7 @@ animations = [{
 "texture": ExtResource("5_1acxj")
 }],
 "loop": true,
-"name": &"W ketchup",
+"name": &"With_Ketchup",
 "speed": 3.0
 }]
 
@@ -55,10 +55,8 @@ b = Vector2(-98, 119)
 position = Vector2(339, -240)
 scale = Vector2(0.612292, 0.619792)
 sprite_frames = SubResource("SpriteFrames_1p50c")
-animation = &"W ketchup"
-autoplay = "W ketchup"
-frame = 1
-frame_progress = 0.11684782
+animation = &"With_Ketchup"
+autoplay = "Default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(197, -121)

@@ -1,4 +1,6 @@
-[gd_scene load_steps=2 format=3 uid="uid://do78wjcc5x2of"]
+[gd_scene load_steps=3 format=3 uid="uid://do78wjcc5x2of"]
+
+[ext_resource type="Texture2D" uid="uid://b2imbiapgxkrg" path="res://assets/Sprites/PlayerKetchup.png" id="1_6wnd8"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1s12"]
 size = Vector2(158, 64)
@@ -8,3 +10,8 @@ size = Vector2(158, 64)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(69, 22)
 shape = SubResource("RectangleShape2D_r1s12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(35.5, -31.5078)
+scale = Vector2(0.442708, 0.442708)
+texture = ExtResource("1_6wnd8")
