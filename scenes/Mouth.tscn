@@ -35,6 +35,17 @@ animations = [{
 "loop": true,
 "name": &"With_Ketchup",
 "speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_lxrdf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_1acxj")
+}],
+"loop": true,
+"name": &"With_some_ketchup",
+"speed": 2.0
 }]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lxrdf"]

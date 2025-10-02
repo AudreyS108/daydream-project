@@ -71,10 +71,14 @@ func _input(event):
 				audio_player1.stop()
 				audio_player2.stream = load("res://assets/Sounds/crunchie mm.mp3")
 				audio_player2.play()
+				
 				sacrifices = sacrifices + 1
 				print("text set")
 				label.text = "Hotdogs sacrificed: " + str(sacrifices)
 				is_colliding_with_area2d2 = false
+				
+				await get_tree().create_timer(1.5).timeout
+				mouth_sprite.play("With_some_ketchup")
 		
 		
 		
