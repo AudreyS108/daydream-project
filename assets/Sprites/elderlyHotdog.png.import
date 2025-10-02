@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bc6po6g6aj42c"
-path="res://.godot/imported/small-enemy-wcarrot-removebg-preview.png-fb2a03a259da98cf868c74d6c55e850b.ctex"
+uid="uid://baj5s1a0831rt"
+path="res://.godot/imported/elderlyHotdog.png-3a8474f2428b442c86ee58b42c542ae7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Sprites/small-enemy-wcarrot-removebg-preview.png"
-dest_files=["res://.godot/imported/small-enemy-wcarrot-removebg-preview.png-fb2a03a259da98cf868c74d6c55e850b.ctex"]
+source_file="res://assets/Sprites/elderlyHotdog.png"
+dest_files=["res://.godot/imported/elderlyHotdog.png-3a8474f2428b442c86ee58b42c542ae7.ctex"]
 
 [params]
 
