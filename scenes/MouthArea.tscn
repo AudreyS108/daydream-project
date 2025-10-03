@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://doij8y8ecudvq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2n6h3"]
+size = Vector2(232, 43)
+
+[node name="MouthArea" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, 10)
+shape = SubResource("RectangleShape2D_2n6h3")
