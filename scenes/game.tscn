@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=19 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scenes/game.gd" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
@@ -10,10 +10,11 @@
 [ext_resource type="Texture2D" uid="uid://0ttatly65po4" path="res://assets/Sprites/F Sign.png" id="9_0tnpc"]
 [ext_resource type="PackedScene" uid="uid://do78wjcc5x2of" path="res://scenes/Area.tscn" id="10_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dmr0oy2ajpwai" path="res://assets/Sprites/X Sign.png" id="10_vtaks"]
-[ext_resource type="PackedScene" uid="uid://bdah5aj2vxmbs" path="res://scenes/Area2.tscn" id="11_kvpfn"]
+[ext_resource type="PackedScene" uid="uid://rgknpquj3g81" path="res://scenes/Area2.tscn" id="11_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dsgavbyidpyy" path="res://assets/Sprites/pixil-frame-0 (8).png" id="12_dinhu"]
 [ext_resource type="AudioStream" uid="uid://l4jka3bubxu6" path="res://assets/Sounds/nono (1).wav" id="14_ca42v"]
 [ext_resource type="AudioStream" uid="uid://vsx8h2xnqsi" path="res://assets/Sounds/crunchie mm.mp3" id="15_ca42v"]
+[ext_resource type="PackedScene" uid="uid://doij8y8ecudvq" path="res://scenes/MouthArea.tscn" id="15_ir15t"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
@@ -78,14 +79,14 @@ position = Vector2(569.25, -302.25)
 scale = Vector2(2.70833, 2.65833)
 texture = ExtResource("10_vtaks")
 
-[node name="Area2D" parent="." instance=ExtResource("10_kvpfn")]
-position = Vector2(-155, -53)
+[node name="Area1" parent="." instance=ExtResource("10_kvpfn")]
+position = Vector2(-155, -54)
 
-[node name="MouthArea" parent="." instance=ExtResource("11_kvpfn")]
-position = Vector2(786, -113)
+[node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
+position = Vector2(-434, -56)
 
 [node name="BasketOfHotdogs" type="Sprite2D" parent="."]
-position = Vector2(-272, -249)
+position = Vector2(-979, -251)
 scale = Vector2(1.31771, 1.32133)
 texture = ExtResource("12_dinhu")
 
@@ -116,7 +117,12 @@ volume_db = 0.991
 stream = ExtResource("15_ca42v")
 volume_db = 8.914
 
-[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
-[connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
+[node name="MouthArea" parent="." instance=ExtResource("15_ir15t")]
+position = Vector2(789, -114)
+
+[connection signal="body_entered" from="Area1" to="." method="_on_area1_body_entered"]
+[connection signal="body_exited" from="Area1" to="." method="_on_area1_body_exited"]
+[connection signal="body_entered" from="Area2" to="." method="_on_area2_body_entered"]
+[connection signal="body_exited" from="Area2" to="." method="_on_area2_body_exited"]
 [connection signal="body_entered" from="MouthArea" to="." method="_on_mouth_area_body_entered"]
 [connection signal="body_exited" from="MouthArea" to="." method="_on_mouth_area_body_exited"]
