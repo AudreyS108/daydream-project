@@ -23,12 +23,17 @@ func _process(delta: float) -> void:
 
 var is_colliding_with_area1 = false
 var is_colliding_with_area2 = false
+var is_colliding_with_moutharea = false
 var sacrifices = 0
 
 func _on_area1_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
 		print("Player entered the area!")
-		is_colliding_with_area1 = true
+		if player_sprite.animation != "Idle":
+			is_colliding_with_area1 = false
+			print("Player entered the area!")
+		else:
+			is_colliding_with_area1 = true
 	
 func _on_area1_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
@@ -37,7 +42,13 @@ func _on_area1_body_exited(body: Node2D) -> void:
 		
 		
 func _on_area2_body_entered(body: Node2D) -> void:
-	is_colliding_with_area2 = true
+	if body.name == "Player":
+		print("Player entered the area!")
+		if player_sprite.animation != "Idle":
+			is_colliding_with_area2 = false
+			print("Player entered the area!")
+		else:
+			is_colliding_with_area2 = true
 
 func _on_area2_body_exited(body: Node2D) -> void:
 	is_colliding_with_area2 = false
@@ -46,13 +57,13 @@ func _on_area2_body_exited(body: Node2D) -> void:
 		
 func _on_mouth_area_body_entered(body: Node2D) -> void:
 	if body.name == "Player":
-		print("Player entered the area2!")
-		is_colliding_with_area2 = true
+		print("Player entered the area!")
+		is_colliding_with_moutharea = true
 
 func _on_mouth_area_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		print("Player exited the area!")
-		is_colliding_with_area2 = false
+		is_colliding_with_moutharea = false
 
 func wait(seconds: float) -> void:
 	await get_tree().create_timer(seconds).timeout
@@ -78,11 +89,11 @@ func _input(event):
 			Hotdog2.queue_free()
 		
 		if event.keycode == KEY_X:
-			if is_colliding_with_area2 == false:
+			if is_colliding_with_moutharea == false:
 				sacrifices = sacrifices
 				label.text = "Hotdogs sacrificed: " + str(sacrifices)
 				audio_player2.stop()
-			if is_colliding_with_area2 == true : #and player_sprite.animation == "Holding"
+			if is_colliding_with_moutharea == true and player_sprite.animation != "Idle": #and player_sprite.animation == "Holding"
 				mouth_sprite.play("With_Ketchup")
 				
 				player_sprite.play("Idle")
@@ -96,7 +107,8 @@ func _input(event):
 				is_colliding_with_area2 = false
 				
 				await get_tree().create_timer(1.5).timeout
-				mouth_sprite.play("With_some_ketchup")
+				mouth_sprite.play("Default")
+				audio_player2.stop()
 		
 		
 		
