@@ -41,8 +41,8 @@ scale = Vector2(1.01667, 1.01667)
 texture = ExtResource("1_lnu2h")
 
 [node name="FSign" type="Sprite2D" parent="."]
-position = Vector2(-418, -180)
-scale = Vector2(3.10833, 3.10833)
+position = Vector2(-274.75, -306.75)
+scale = Vector2(4.74167, 4.74167)
 texture = ExtResource("9_0tnpc")
 
 [node name="Mouth" parent="." instance=ExtResource("3_lnu2h")]
@@ -71,13 +71,18 @@ stream = ExtResource("5_ir15t")
 volume_db = -2.971
 autoplay = true
 
+[node name="Objective" type="Sprite2D" parent="."]
+position = Vector2(38, -880)
+scale = Vector2(1.45746, 1.45746)
+texture = ExtResource("4_lbhrr")
+
 [node name="XSign" type="Sprite2D" parent="."]
-position = Vector2(395.312, -470.192)
-scale = Vector2(4.07708, 4.00181)
+position = Vector2(312, -462)
+scale = Vector2(4.9875, 4.89542)
 texture = ExtResource("10_vtaks")
 
 [node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
-position = Vector2(-856, -59)
+position = Vector2(-468, -53)
 
 [node name="BasketOfHotdogs" type="Sprite2D" parent="."]
 position = Vector2(-580, 256)
@@ -85,62 +90,39 @@ scale = Vector2(1.31771, 1.32133)
 texture = ExtResource("12_dinhu")
 
 [node name="MouthArea" parent="." instance=ExtResource("15_ir15t")]
-position = Vector2(798, -231)
+position = Vector2(800, -307)
 
 [node name="Area1" parent="." instance=ExtResource("15_rysoc")]
-position = Vector2(-533, -56)
+position = Vector2(11, -50)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(201, -48)
+position = Vector2(412, -48)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-102, -48)
-zoom = Vector2(0.8, 0.8)
+position = Vector2(-3, -48)
+zoom = Vector2(0.6, 0.6)
 limit_right = 970
 limit_bottom = 0
 limit_smoothed = true
 script = ExtResource("4_u5sy4")
 
+[node name="Label" type="Label" parent="Player/Camera2D"]
+offset_left = -337.0
+offset_top = -262.0
+offset_right = 132.0
+offset_bottom = -207.0
+theme_override_font_sizes/font_size = 40
+text = "Hotdogs sacrificed: 0"
+horizontal_alignment = 1
+metadata/_edit_use_anchors_ = true
+
 [node name="AudioStreamPlayer1" type="AudioStreamPlayer2D" parent="Player"]
-position = Vector2(-115, -33)
 stream = ExtResource("14_ca42v")
 volume_db = 0.991
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer2D" parent="Player"]
-position = Vector2(-99, -60)
 stream = ExtResource("15_ca42v")
 volume_db = 8.914
-
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-layer = 30
-
-[node name="Control" type="Control" parent="CanvasLayer"]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="CanvasLayer/Control"]
-visibility_layer = 21
-layout_mode = 2
-anchor_left = 16.475
-anchor_top = 15.025
-anchor_right = 16.475
-anchor_bottom = 15.025
-offset_right = 473.0
-offset_bottom = 55.0
-theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_constants/outline_size = 3
-theme_override_font_sizes/font_size = 30
-text = "Hotdogs sacrificed: 0"
-horizontal_alignment = 2
-uppercase = true
-metadata/_edit_use_anchors_ = true
-
-[node name="Objective" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(579, 118)
-scale = Vector2(0.893497, 0.893496)
-texture = ExtResource("4_lbhrr")
 
 [connection signal="body_entered" from="Area2" to="." method="_on_area2_body_entered"]
 [connection signal="body_exited" from="Area2" to="." method="_on_area2_body_exited"]

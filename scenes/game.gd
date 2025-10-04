@@ -2,8 +2,7 @@ extends Node2D
 
 
 # Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	pass # Replace with function body.
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -14,12 +13,19 @@ func _process(delta: float) -> void:
 @onready var player_sprite: AnimatedSprite2D = $Player/AnimatedSprite2D
 @onready var audio_player1: AudioStreamPlayer2D = $Player/AudioStreamPlayer1
 @onready var audio_player2: AudioStreamPlayer2D = $Player/AudioStreamPlayer2
-@onready var label: Label = $Player/Camera2D/Label
 
 @onready var mouth_sprite: AnimatedSprite2D = $Mouth/AnimatedSprite2D
 
 @onready var Hotdog1: Area2D = $Area1
 @onready var Hotdog2: Area2D = $Area2
+
+@onready var Speech1: Sprite2D = $Area1/Sprite2D/Speechbubble2
+
+@onready var label: Label = $CanvasLayer/Control/Label
+
+func _ready() -> void:
+	Speech1.visible = false
+
 
 var is_colliding_with_area1 = false
 var is_colliding_with_area2 = false
@@ -32,13 +38,16 @@ func _on_area1_body_entered(body: Node2D) -> void:
 		if player_sprite.animation != "Idle":
 			is_colliding_with_area1 = false
 			print("Player entered the area!")
+			
 		else:
 			is_colliding_with_area1 = true
+			Speech1.visible = true 
 	
 func _on_area1_body_exited(body: Node2D) -> void:
 	if body.name == "Player":
 		print("Player exited the area!")
 		is_colliding_with_area1 = false
+		Speech1.visible = false
 		
 		
 func _on_area2_body_entered(body: Node2D) -> void:

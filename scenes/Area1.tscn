@@ -1,17 +1,34 @@
-[gd_scene load_steps=3 format=3 uid="uid://bv0hcj1b2hqyp"]
+[gd_scene load_steps=4 format=3 uid="uid://bv0hcj1b2hqyp"]
 
 [ext_resource type="Texture2D" uid="uid://b2imbiapgxkrg" path="res://assets/Sprites/PlayerKetchup.png" id="1_m0ugd"]
+[ext_resource type="Texture2D" uid="uid://c7pal5cd4rm85" path="res://assets/Sprites/speechbubble2.png" id="2_rrdbi"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1s12"]
-size = Vector2(158, 64)
+size = Vector2(181, 79)
 
 [node name="Area2D" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(69, 22)
+position = Vector2(31.5, 11)
 shape = SubResource("RectangleShape2D_r1s12")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(35.5, -31.5078)
-scale = Vector2(0.442708, 0.442708)
+position = Vector2(-14.5, -35.4141)
+scale = Vector2(0.463542, 0.463542)
 texture = ExtResource("1_m0ugd")
+
+[node name="Speechbubble2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(247.011, -441.354)
+scale = Vector2(1.99583, 1.99583)
+texture = ExtResource("2_rrdbi")
+
+[node name="Label" type="Label" parent="Sprite2D/Speechbubble2"]
+offset_left = -150.27
+offset_top = -68.1129
+offset_right = 196.73
+offset_bottom = 42.8871
+theme_override_colors/font_color = Color(0.00117341, 0.000405727, 0.00140292, 1)
+theme_override_font_sizes/font_size = 23
+text = "PLEASE dude I'm your friend 
+YOU CAN'T DO THIS TO ME!
+Please don't kill me :("

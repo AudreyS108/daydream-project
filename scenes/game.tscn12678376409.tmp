@@ -71,6 +71,11 @@ stream = ExtResource("5_ir15t")
 volume_db = -2.971
 autoplay = true
 
+[node name="Objective" type="Sprite2D" parent="."]
+position = Vector2(77, -667)
+scale = Vector2(1.0398, 1.0398)
+texture = ExtResource("4_lbhrr")
+
 [node name="XSign" type="Sprite2D" parent="."]
 position = Vector2(395.312, -470.192)
 scale = Vector2(4.07708, 4.00181)
@@ -85,7 +90,7 @@ scale = Vector2(1.31771, 1.32133)
 texture = ExtResource("12_dinhu")
 
 [node name="MouthArea" parent="." instance=ExtResource("15_ir15t")]
-position = Vector2(798, -231)
+position = Vector2(800, -307)
 
 [node name="Area1" parent="." instance=ExtResource("15_rysoc")]
 position = Vector2(-533, -56)
@@ -136,11 +141,6 @@ text = "Hotdogs sacrificed: 0"
 horizontal_alignment = 2
 uppercase = true
 metadata/_edit_use_anchors_ = true
-
-[node name="Objective" type="Sprite2D" parent="CanvasLayer/Control"]
-position = Vector2(579, 118)
-scale = Vector2(0.893497, 0.893496)
-texture = ExtResource("4_lbhrr")
 
 [connection signal="body_entered" from="Area2" to="." method="_on_area2_body_entered"]
 [connection signal="body_exited" from="Area2" to="." method="_on_area2_body_exited"]
