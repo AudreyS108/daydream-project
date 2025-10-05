@@ -1,20 +1,20 @@
 [gd_scene load_steps=19 format=3 uid="uid://lhoagjgbcmbs"]
 
-[ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scenes/game.gd" id="1_kvuet"]
+[ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scripts/game.gd" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://c2c6ebaepviij" path="res://scenes/Mouth.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://k2y347lvohch" path="res://assets/Sprites/Screenshot_28-9-2025_121635_www.canva.com-removebg-preview.png" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://dea3lfsr5r6cv" path="res://scripts/camera_2d.gd" id="4_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://dhwi5hcpws2t" path="res://assets/Sounds/happy-kids-background-music-364459.wav" id="5_ir15t"]
-[ext_resource type="Texture2D" uid="uid://0ttatly65po4" path="res://assets/Sprites/F Sign.png" id="9_0tnpc"]
-[ext_resource type="PackedScene" uid="uid://do78wjcc5x2of" path="res://scenes/Area.tscn" id="10_kvpfn"]
-[ext_resource type="Texture2D" uid="uid://dmr0oy2ajpwai" path="res://assets/Sprites/X Sign.png" id="10_vtaks"]
 [ext_resource type="PackedScene" uid="uid://rgknpquj3g81" path="res://scenes/Area2.tscn" id="11_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dsgavbyidpyy" path="res://assets/Sprites/pixil-frame-0 (8).png" id="12_dinhu"]
 [ext_resource type="AudioStream" uid="uid://l4jka3bubxu6" path="res://assets/Sounds/nono (1).wav" id="14_ca42v"]
+[ext_resource type="PackedScene" uid="uid://diu3tsxu80ggx" path="res://scenes/Area3.tscn" id="14_trtic"]
 [ext_resource type="AudioStream" uid="uid://vsx8h2xnqsi" path="res://assets/Sounds/crunchie mm.mp3" id="15_ca42v"]
 [ext_resource type="PackedScene" uid="uid://doij8y8ecudvq" path="res://scenes/MouthArea.tscn" id="15_ir15t"]
+[ext_resource type="PackedScene" uid="uid://bv0hcj1b2hqyp" path="res://scenes/Area1.tscn" id="15_rysoc"]
+[ext_resource type="PackedScene" uid="uid://dnkckk8cmgjll" path="res://scenes/Area4.tscn" id="15_ssvqc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
@@ -31,20 +31,17 @@ distance = -11.0
 script = ExtResource("1_kvuet")
 
 [node name="Bgfinal3" type="Sprite2D" parent="."]
-position = Vector2(-1902, -533)
+position = Vector2(-1279.67, -543.5)
+scale = Vector2(1.01944, 1.01944)
 texture = ExtResource("1_lnu2h")
 
 [node name="Bgfinal2" type="Sprite2D" parent="."]
-position = Vector2(14, -533)
+position = Vector2(-2.00002, -542)
+scale = Vector2(1.01667, 1.01667)
 texture = ExtResource("1_lnu2h")
 
-[node name="FSign" type="Sprite2D" parent="."]
-position = Vector2(-215, -247)
-scale = Vector2(2.75, 2.75)
-texture = ExtResource("9_0tnpc")
-
 [node name="Mouth" parent="." instance=ExtResource("3_lnu2h")]
-position = Vector2(596, 41)
+position = Vector2(816, 72)
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(7, 27)
@@ -69,60 +66,85 @@ stream = ExtResource("5_ir15t")
 volume_db = -2.971
 autoplay = true
 
-[node name="Objective" type="Sprite2D" parent="."]
-position = Vector2(300, -503)
-scale = Vector2(0.798246, 0.798246)
-texture = ExtResource("4_lbhrr")
-
-[node name="XSign" type="Sprite2D" parent="."]
-position = Vector2(569.25, -302.25)
-scale = Vector2(2.70833, 2.65833)
-texture = ExtResource("10_vtaks")
-
-[node name="Area1" parent="." instance=ExtResource("10_kvpfn")]
-position = Vector2(-155, -54)
-
-[node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
-position = Vector2(-434, -56)
-
 [node name="BasketOfHotdogs" type="Sprite2D" parent="."]
-position = Vector2(-979, -251)
+position = Vector2(-580, 256)
 scale = Vector2(1.31771, 1.32133)
 texture = ExtResource("12_dinhu")
 
+[node name="MouthArea" parent="." instance=ExtResource("15_ir15t")]
+position = Vector2(798, -231)
+
+[node name="Area1" parent="." instance=ExtResource("15_rysoc")]
+position = Vector2(-490, -52)
+
+[node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
+position = Vector2(-901, -52)
+
+[node name="Area3" parent="." instance=ExtResource("14_trtic")]
+position = Vector2(-1306, -54)
+
+[node name="Area4" parent="." instance=ExtResource("15_ssvqc")]
+position = Vector2(-1624, -55)
+
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
-position = Vector2(412, -48)
+position = Vector2(201, -48)
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(-3, -48)
+position = Vector2(-102, -48)
+zoom = Vector2(0.8, 0.8)
 limit_right = 970
 limit_bottom = 0
 limit_smoothed = true
 script = ExtResource("4_u5sy4")
 
-[node name="Label" type="Label" parent="Player/Camera2D"]
-offset_left = -240.0
-offset_top = -207.0
-offset_right = 229.0
-offset_bottom = -154.0
-theme_override_font_sizes/font_size = 30
-text = "Hotdogs sacrificed: 0"
-horizontal_alignment = 1
-
 [node name="AudioStreamPlayer1" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(-115, -33)
 stream = ExtResource("14_ca42v")
 volume_db = 0.991
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer2D" parent="Player"]
+position = Vector2(-99, -60)
 stream = ExtResource("15_ca42v")
 volume_db = 8.914
 
-[node name="MouthArea" parent="." instance=ExtResource("15_ir15t")]
-position = Vector2(789, -114)
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 30
 
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="CanvasLayer/Control"]
+visibility_layer = 21
+layout_mode = 2
+anchor_left = 16.475
+anchor_top = 15.025
+anchor_right = 16.475
+anchor_bottom = 15.025
+offset_right = 473.0
+offset_bottom = 55.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 30
+text = "Hotdogs sacrificed: 0/5"
+horizontal_alignment = 2
+uppercase = true
+metadata/_edit_use_anchors_ = true
+
+[node name="Objective" type="Sprite2D" parent="CanvasLayer/Control"]
+position = Vector2(579, 118)
+scale = Vector2(0.893497, 0.893496)
+texture = ExtResource("4_lbhrr")
+
+[connection signal="body_entered" from="MouthArea" to="." method="_on_mouth_area_body_entered"]
+[connection signal="body_exited" from="MouthArea" to="." method="_on_mouth_area_body_exited"]
 [connection signal="body_entered" from="Area1" to="." method="_on_area1_body_entered"]
 [connection signal="body_exited" from="Area1" to="." method="_on_area1_body_exited"]
 [connection signal="body_entered" from="Area2" to="." method="_on_area2_body_entered"]
 [connection signal="body_exited" from="Area2" to="." method="_on_area2_body_exited"]
-[connection signal="body_entered" from="MouthArea" to="." method="_on_mouth_area_body_entered"]
-[connection signal="body_exited" from="MouthArea" to="." method="_on_mouth_area_body_exited"]
+[connection signal="body_entered" from="Area3" to="." method="_on_area3_body_entered"]
+[connection signal="body_exited" from="Area3" to="." method="_on_area3_body_exited"]
+[connection signal="body_entered" from="Area4" to="." method="_on_area4_body_entered"]
+[connection signal="body_exited" from="Area4" to="." method="_on_area4_body_exited"]

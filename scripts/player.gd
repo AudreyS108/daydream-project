@@ -15,6 +15,7 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 
 	# Handle jump.
+	
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
 		velocity.y = JUMP_VELOCITY
 		
@@ -36,7 +37,7 @@ func wait(seconds: float) -> void:
 func _input(event):
 	
 	if event is InputEventKey and event.pressed and not event.echo:
-		if event.keycode == KEY_RIGHT: 
+		if event.keycode == KEY_RIGHT or event.keycode == KEY_D: 
 			sprite.flip_h = true  
-		if event.keycode == KEY_LEFT:  
+		if event.keycode == KEY_LEFT or event.keycode == KEY_A:  
 			sprite.flip_h = false  

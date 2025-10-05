@@ -1,10 +1,17 @@
-[gd_scene load_steps=2 format=3 uid="uid://doij8y8ecudvq"]
+[gd_scene load_steps=3 format=3 uid="uid://doij8y8ecudvq"]
+
+[ext_resource type="Texture2D" uid="uid://dmr0oy2ajpwai" path="res://assets/Sprites/X Sign.png" id="1_xvb41"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2n6h3"]
-size = Vector2(232, 43)
+size = Vector2(316, 43)
 
 [node name="MouthArea" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(3, 10)
+position = Vector2(-39, 10)
 shape = SubResource("RectangleShape2D_2n6h3")
+
+[node name="XSign" type="Sprite2D" parent="CollisionShape2D"]
+position = Vector2(-307, -148)
+scale = Vector2(4.07708, 4.00181)
+texture = ExtResource("1_xvb41")

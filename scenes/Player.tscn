@@ -1,10 +1,12 @@
-[gd_scene load_steps=9 format=3 uid="uid://cqxcdhfp1tm65"]
+[gd_scene load_steps=11 format=3 uid="uid://cqxcdhfp1tm65"]
 
 [ext_resource type="Script" uid="uid://cll0wm4eiwo6q" path="res://scripts/player.gd" id="1_3li8b"]
 [ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="1_v6fml"]
 [ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="2_3li8b"]
 [ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="2_mdl7e"]
 [ext_resource type="Texture2D" uid="uid://bdsr6lj0immch" path="res://assets/Sprites/CarryHotdog2.png" id="3_qu4a1"]
+[ext_resource type="Texture2D" uid="uid://hj3dm0kqodlo" path="res://assets/Sprites/CarryHotdog3.png" id="4_70d11"]
+[ext_resource type="Texture2D" uid="uid://bl7y3cu0krj82" path="res://assets/Sprites/CarryHotdog4.png" id="5_cw2d6"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mdl7e"]
 animations = [{
@@ -26,6 +28,22 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_70d11")
+}],
+"loop": true,
+"name": &"Holding3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_cw2d6")
+}],
+"loop": true,
+"name": &"Holding4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_v6fml")
 }, {
 "duration": 1.0,
@@ -40,16 +58,16 @@ animations = [{
 size = Vector2(150.5, 185)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v6fml"]
-size = Vector2(97, 184.5)
+size = Vector2(89, 186.5)
 
 [node name="CharacterBody2D" type="CharacterBody2D"]
 script = ExtResource("1_3li8b")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(9, -103)
-scale = Vector2(0.499349, 0.499349)
+position = Vector2(-99.5, -118.695)
+scale = Vector2(0.551667, 0.551667)
 sprite_frames = SubResource("SpriteFrames_mdl7e")
-animation = &"Holding2"
+animation = &"Holding4"
 autoplay = "Idle"
 
 [node name="AttackArea" type="Area2D" parent="AnimatedSprite2D"]
@@ -61,5 +79,5 @@ position = Vector2(-4.25, -50)
 shape = SubResource("RectangleShape2D_mdl7e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(10.5, -51.75)
+position = Vector2(-94.5, -52.75)
 shape = SubResource("RectangleShape2D_v6fml")

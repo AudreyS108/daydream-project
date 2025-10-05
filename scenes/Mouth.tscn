@@ -21,9 +21,6 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_lxrdf")
-}, {
-"duration": 1.0,
 "texture": ExtResource("3_1acxj")
 }, {
 "duration": 1.0,
@@ -31,6 +28,9 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("5_1acxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_lxrdf")
 }],
 "loop": true,
 "name": &"With_Ketchup",
@@ -38,10 +38,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_lxrdf")
+"texture": ExtResource("3_1acxj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_1acxj")
+"texture": ExtResource("1_lxrdf")
 }],
 "loop": true,
 "name": &"With_some_ketchup",
@@ -49,34 +49,34 @@ animations = [{
 }]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lxrdf"]
-a = Vector2(116, 3)
-b = Vector2(3, 0)
+a = Vector2(229, 4)
+b = Vector2(-19, 8)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_v5odg"]
-a = Vector2(159, -132)
-b = Vector2(-33, 6)
+a = Vector2(224, -215)
+b = Vector2(-162, 120)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ktecv"]
-a = Vector2(-70, -58)
+a = Vector2(-62, -231)
 b = Vector2(-98, 119)
 
 [node name="mouth" type="CharacterBody2D"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(339, -240)
-scale = Vector2(0.612292, 0.619792)
+position = Vector2(89.5, -384.878)
+scale = Vector2(0.850833, 0.861255)
 sprite_frames = SubResource("SpriteFrames_1p50c")
-animation = &"With_Ketchup"
+animation = &"Default"
 autoplay = "Default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(197, -121)
+position = Vector2(-79, -276)
 shape = SubResource("SegmentShape2D_lxrdf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
-position = Vector2(41, 11)
+position = Vector2(-325, -52)
 shape = SubResource("SegmentShape2D_v5odg")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="."]
-position = Vector2(410, -237)
+position = Vector2(243, -442)
 shape = SubResource("SegmentShape2D_ktecv")
