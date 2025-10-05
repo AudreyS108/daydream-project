@@ -25,6 +25,11 @@ extends Node2D
 		"node": $Area3,
 		"speech": $Area3/Sprite2D/Speechbubble2,
 		"held_animation": "Holding3"
+	},
+	"area4": {
+		"node": $Area4,
+		"speech": $Area4/Sprite2D/Speechbubble2,
+		"held_animation": "Holding4"
 	}
 }
 
@@ -59,6 +64,8 @@ func _on_area2_body_entered(body): _on_area_body_entered("area2", body)
 func _on_area2_body_exited(body): _on_area_body_exited("area2", body)
 func _on_area3_body_entered(body): _on_area_body_entered("area3", body)
 func _on_area3_body_exited(body): _on_area_body_exited("area3", body)
+func _on_area4_body_entered(body): _on_area_body_entered("area4", body)
+func _on_area4_body_exited(body): _on_area_body_exited("area4", body)
 
 
 func _on_mouth_area_body_entered(body: Node2D) -> void:
@@ -98,7 +105,7 @@ func _killhotdog() -> void:
 	audio_player2.play()
 
 	sacrifices = sacrifices + 1
-	label.text = "Hotdogs sacrificed: " + str(sacrifices)
+	label.text = "Hotdogs sacrificed: " + str(sacrifices) + "/5"
 	await get_tree().create_timer(1.5).timeout
 
 	mouth.play("Default")

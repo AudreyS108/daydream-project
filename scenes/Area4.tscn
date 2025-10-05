@@ -1,0 +1,55 @@
+[gd_scene load_steps=5 format=3 uid="uid://dnkckk8cmgjll"]
+
+[ext_resource type="Texture2D" uid="uid://dg11vlrkiyxmk" path="res://assets/Sprites/Mom Hotdog.png" id="1_ie2yl"]
+[ext_resource type="Texture2D" uid="uid://c7pal5cd4rm85" path="res://assets/Sprites/speechbubble2.png" id="2_t7ryq"]
+[ext_resource type="Texture2D" uid="uid://0ttatly65po4" path="res://assets/Sprites/F Sign.png" id="3_nd3nj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1s12"]
+size = Vector2(158, 203)
+
+[node name="Area4" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(69, -47.5)
+shape = SubResource("RectangleShape2D_r1s12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(43, -46.1563)
+scale = Vector2(0.552083, 0.552083)
+texture = ExtResource("1_ie2yl")
+
+[node name="Speechbubble2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(181.897, -453.126)
+scale = Vector2(1.98345, 1.98345)
+texture = ExtResource("2_t7ryq")
+
+[node name="Label" type="Label" parent="Sprite2D/Speechbubble2"]
+anchors_preset = -1
+anchor_left = -0.054146
+anchor_top = -0.00195268
+anchor_right = -0.054146
+anchor_bottom = -0.00195268
+offset_left = -134.183
+offset_top = -73.3605
+offset_right = 204.817
+offset_bottom = 39.6395
+theme_override_colors/font_color = Color(0.00117341, 0.000405727, 0.00140292, 1)
+theme_override_font_sizes/font_size = 22
+text = "Hey honey, I know you have 
+to do this... It's alright. I have
+ lived long enough, its okay... "
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Sprite2D/Speechbubble2"]
+offset_left = -149.183
+offset_top = 99.6373
+offset_right = 58.8168
+offset_bottom = 127.637
+theme_override_font_sizes/font_size = 20
+text = "Your Mum"
+metadata/_edit_use_anchors_ = true
+
+[node name="FSign" type="Sprite2D" parent="Sprite2D/Speechbubble2"]
+position = Vector2(46.8961, 83.6774)
+scale = Vector2(3.10833, 3.10833)
+texture = ExtResource("3_nd3nj")

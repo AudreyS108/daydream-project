@@ -50,10 +50,10 @@ animations = [{
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_lxrdf"]
 a = Vector2(229, 4)
-b = Vector2(3, 0)
+b = Vector2(-19, 8)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_v5odg"]
-a = Vector2(234, -224)
+a = Vector2(224, -215)
 b = Vector2(-162, 120)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_ktecv"]
@@ -70,7 +70,7 @@ animation = &"Default"
 autoplay = "Default"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-85, -274)
+position = Vector2(-79, -276)
 shape = SubResource("SegmentShape2D_lxrdf")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
