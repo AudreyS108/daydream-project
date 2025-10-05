@@ -1,17 +1,54 @@
-[gd_scene load_steps=3 format=3 uid="uid://rgknpquj3g81"]
+[gd_scene load_steps=5 format=3 uid="uid://rgknpquj3g81"]
 
 [ext_resource type="Texture2D" uid="uid://baj5s1a0831rt" path="res://assets/Sprites/elderlyHotdog.png" id="1_t0msj"]
+[ext_resource type="Texture2D" uid="uid://c7pal5cd4rm85" path="res://assets/Sprites/speechbubble2.png" id="2_cplc2"]
+[ext_resource type="Texture2D" uid="uid://0ttatly65po4" path="res://assets/Sprites/F Sign.png" id="3_72r2t"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_r1s12"]
-size = Vector2(158, 64)
+size = Vector2(158, 203)
 
 [node name="Area2D" type="Area2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(69, 22)
+position = Vector2(69, -47.5)
 shape = SubResource("RectangleShape2D_r1s12")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(39.8751, -36.1154)
-scale = Vector2(0.025836, 0.025836)
+position = Vector2(40, -43.684)
+scale = Vector2(0.0279605, 0.0279605)
 texture = ExtResource("1_t0msj")
+
+[node name="Speechbubble2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(3397.65, -8988.25)
+scale = Vector2(38.8945, 38.8945)
+texture = ExtResource("2_cplc2")
+
+[node name="Label" type="Label" parent="Sprite2D/Speechbubble2"]
+offset_left = -139.0
+offset_top = -74.0
+offset_right = 155.0
+offset_bottom = 39.0
+theme_override_colors/font_color = Color(0.00117341, 0.000405727, 0.00140292, 1)
+theme_override_font_sizes/font_size = 18
+text = "Just because I'm old doesn't
+ mean i should be killed. 
+You darn kids these days, always 
+thinking they know whats right..."
+
+[node name="Label2" type="Label" parent="Sprite2D/Speechbubble2"]
+offset_left = -127.815
+offset_top = 96.5509
+offset_right = 80.185
+offset_bottom = 124.551
+theme_override_font_sizes/font_size = 20
+text = "Elderly"
+
+[node name="FSign" type="Sprite2D" parent="Sprite2D/Speechbubble2"]
+position = Vector2(46.8961, 83.6774)
+scale = Vector2(3.10833, 3.10833)
+texture = ExtResource("3_72r2t")
+
+[node name="FSign2" type="Sprite2D" parent="Sprite2D/Speechbubble2"]
+position = Vector2(46.8961, 83.6774)
+scale = Vector2(3.10833, 3.10833)
+texture = ExtResource("3_72r2t")
