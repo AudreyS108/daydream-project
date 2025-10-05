@@ -1,0 +1,50 @@
+[gd_scene load_steps=5 format=3 uid="uid://diu3tsxu80ggx"]
+
+[ext_resource type="Texture2D" uid="uid://c2pux40xhmybo" path="res://assets/Sprites/RobberHotdog.png" id="1_enej8"]
+[ext_resource type="Texture2D" uid="uid://c7pal5cd4rm85" path="res://assets/Sprites/speechbubble2.png" id="2_0cewj"]
+[ext_resource type="Texture2D" uid="uid://0ttatly65po4" path="res://assets/Sprites/F Sign.png" id="3_cimlb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1s12"]
+size = Vector2(158, 203)
+
+[node name="Area2D" type="Area2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(69, -47.5)
+shape = SubResource("RectangleShape2D_r1s12")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(45.5, -40.632)
+scale = Vector2(0.0240575, 0.0240575)
+texture = ExtResource("1_enej8")
+
+[node name="Speechbubble2" type="Sprite2D" parent="Sprite2D"]
+position = Vector2(3759.68, -9484.81)
+scale = Vector2(41.2231, 41.2231)
+texture = ExtResource("2_0cewj")
+
+[node name="Label" type="Label" parent="Sprite2D/Speechbubble2"]
+offset_left = -147.125
+offset_top = -73.5626
+offset_right = 191.875
+offset_bottom = 39.4374
+theme_override_colors/font_color = Color(0.00117341, 0.000405727, 0.00140292, 1)
+theme_override_font_sizes/font_size = 22
+text = "Oi, just because I made some 
+mistakes before doesn't 
+mean I deserve to die. Innit?"
+metadata/_edit_use_anchors_ = true
+
+[node name="Label2" type="Label" parent="Sprite2D/Speechbubble2"]
+offset_left = -133.332
+offset_top = 104.827
+offset_right = 74.6678
+offset_bottom = 132.827
+theme_override_font_sizes/font_size = 20
+text = "Robber"
+metadata/_edit_use_anchors_ = true
+
+[node name="FSign" type="Sprite2D" parent="Sprite2D/Speechbubble2"]
+position = Vector2(46.8961, 83.6774)
+scale = Vector2(3.10833, 3.10833)
+texture = ExtResource("3_cimlb")

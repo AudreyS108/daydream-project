@@ -42,13 +42,9 @@ offset_right = 80.185
 offset_bottom = 124.551
 theme_override_font_sizes/font_size = 20
 text = "Elderly"
+metadata/_edit_use_anchors_ = true
 
 [node name="FSign" type="Sprite2D" parent="Sprite2D/Speechbubble2"]
-position = Vector2(46.8961, 83.6774)
-scale = Vector2(3.10833, 3.10833)
-texture = ExtResource("3_72r2t")
-
-[node name="FSign2" type="Sprite2D" parent="Sprite2D/Speechbubble2"]
 position = Vector2(46.8961, 83.6774)
 scale = Vector2(3.10833, 3.10833)
 texture = ExtResource("3_72r2t")

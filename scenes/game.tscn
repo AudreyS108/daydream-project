@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=18 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scripts/game.gd" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://rgknpquj3g81" path="res://scenes/Area2.tscn" id="11_kvpfn"]
 [ext_resource type="Texture2D" uid="uid://dsgavbyidpyy" path="res://assets/Sprites/pixil-frame-0 (8).png" id="12_dinhu"]
 [ext_resource type="AudioStream" uid="uid://l4jka3bubxu6" path="res://assets/Sounds/nono (1).wav" id="14_ca42v"]
+[ext_resource type="PackedScene" uid="uid://diu3tsxu80ggx" path="res://scenes/Area3.tscn" id="14_trtic"]
 [ext_resource type="AudioStream" uid="uid://vsx8h2xnqsi" path="res://assets/Sounds/crunchie mm.mp3" id="15_ca42v"]
 [ext_resource type="PackedScene" uid="uid://doij8y8ecudvq" path="res://scenes/MouthArea.tscn" id="15_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bv0hcj1b2hqyp" path="res://scenes/Area1.tscn" id="15_rysoc"]
@@ -64,9 +65,6 @@ stream = ExtResource("5_ir15t")
 volume_db = -2.971
 autoplay = true
 
-[node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
-position = Vector2(-877, -53)
-
 [node name="BasketOfHotdogs" type="Sprite2D" parent="."]
 position = Vector2(-580, 256)
 scale = Vector2(1.31771, 1.32133)
@@ -77,6 +75,12 @@ position = Vector2(798, -231)
 
 [node name="Area1" parent="." instance=ExtResource("15_rysoc")]
 position = Vector2(-532, -52)
+
+[node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
+position = Vector2(-877, -53)
+
+[node name="Area3" parent="." instance=ExtResource("14_trtic")]
+position = Vector2(-1264, -57)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(201, -48)
@@ -130,9 +134,11 @@ position = Vector2(579, 118)
 scale = Vector2(0.893497, 0.893496)
 texture = ExtResource("4_lbhrr")
 
-[connection signal="body_entered" from="Area2" to="." method="_on_area2_body_entered"]
-[connection signal="body_exited" from="Area2" to="." method="_on_area2_body_exited"]
 [connection signal="body_entered" from="MouthArea" to="." method="_on_mouth_area_body_entered"]
 [connection signal="body_exited" from="MouthArea" to="." method="_on_mouth_area_body_exited"]
 [connection signal="body_entered" from="Area1" to="." method="_on_area1_body_entered"]
 [connection signal="body_exited" from="Area1" to="." method="_on_area1_body_exited"]
+[connection signal="body_entered" from="Area2" to="." method="_on_area2_body_entered"]
+[connection signal="body_exited" from="Area2" to="." method="_on_area2_body_exited"]
+[connection signal="body_entered" from="Area3" to="." method="_on_area3_body_entered"]
+[connection signal="body_exited" from="Area3" to="." method="_on_area3_body_exited"]
