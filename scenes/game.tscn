@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=19 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scripts/game.gd" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
@@ -14,6 +14,7 @@
 [ext_resource type="AudioStream" uid="uid://vsx8h2xnqsi" path="res://assets/Sounds/crunchie mm.mp3" id="15_ca42v"]
 [ext_resource type="PackedScene" uid="uid://doij8y8ecudvq" path="res://scenes/MouthArea.tscn" id="15_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bv0hcj1b2hqyp" path="res://scenes/Area1.tscn" id="15_rysoc"]
+[ext_resource type="PackedScene" uid="uid://dnkckk8cmgjll" path="res://scenes/Area4.tscn" id="15_ssvqc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
@@ -74,13 +75,16 @@ texture = ExtResource("12_dinhu")
 position = Vector2(798, -231)
 
 [node name="Area1" parent="." instance=ExtResource("15_rysoc")]
-position = Vector2(-532, -52)
+position = Vector2(-490, -52)
 
 [node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
-position = Vector2(-877, -53)
+position = Vector2(-901, -52)
 
 [node name="Area3" parent="." instance=ExtResource("14_trtic")]
-position = Vector2(-1264, -57)
+position = Vector2(-1306, -54)
+
+[node name="Area4" parent="." instance=ExtResource("15_ssvqc")]
+position = Vector2(-1624, -55)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(201, -48)
@@ -124,7 +128,7 @@ offset_bottom = 55.0
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 3
 theme_override_font_sizes/font_size = 30
-text = "Hotdogs sacrificed: 0"
+text = "Hotdogs sacrificed: 0/5"
 horizontal_alignment = 2
 uppercase = true
 metadata/_edit_use_anchors_ = true
@@ -142,3 +146,5 @@ texture = ExtResource("4_lbhrr")
 [connection signal="body_exited" from="Area2" to="." method="_on_area2_body_exited"]
 [connection signal="body_entered" from="Area3" to="." method="_on_area3_body_entered"]
 [connection signal="body_exited" from="Area3" to="." method="_on_area3_body_exited"]
+[connection signal="body_entered" from="Area4" to="." method="_on_area4_body_entered"]
+[connection signal="body_exited" from="Area4" to="." method="_on_area4_body_exited"]
