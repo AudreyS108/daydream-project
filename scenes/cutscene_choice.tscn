@@ -1,0 +1,342 @@
+[gd_scene load_steps=23 format=3 uid="uid://kv6k3u3jjuye"]
+
+[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_1op8x"]
+[ext_resource type="Script" uid="uid://ym8rvbwwj6ai" path="res://scenes/cutscene_choice.gd" id="1_y0gh3"]
+[ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="2_qpu5d"]
+[ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="3_oftq6"]
+[ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="4_i1l8k"]
+[ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="5_fnbpi"]
+[ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="6_0xrp4"]
+[ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="7_r0n6m"]
+[ext_resource type="Texture2D" uid="uid://bdsr6lj0immch" path="res://assets/Sprites/CarryHotdog2.png" id="8_7rlx5"]
+[ext_resource type="Texture2D" uid="uid://cgbnmteyrucud" path="res://assets/Sprites/Player.png" id="8_fymfc"]
+[ext_resource type="Texture2D" uid="uid://hj3dm0kqodlo" path="res://assets/Sprites/CarryHotdog3.png" id="9_fymfc"]
+[ext_resource type="Texture2D" uid="uid://bl7y3cu0krj82" path="res://assets/Sprites/CarryHotdog4.png" id="10_okmvt"]
+[ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="11_y0gh3"]
+[ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="12_ckb2c"]
+[ext_resource type="Texture2D" uid="uid://dvt1ccp0fw8bn" path="res://assets/Sprites/Player2.png" id="14_fymfc"]
+[ext_resource type="FontFile" uid="uid://35s6lnabdsfb" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="15_okmvt"]
+
+[sub_resource type="Animation" id="Animation_7rlx5"]
+resource_name = "MakeAChoice"
+length = 30.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(-430, -160), Vector2(175, -160)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Characters/Player:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.25, 0.5, 0.766667, 1.01667, 1.26667, 1.51667, 1.78333, 2.03333, 2.26667, 2.51667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [1, 0, 1, 0, 1, 0, 1, 0, 1, 0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/Panel/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["MOUTH:"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI/Panel/RichTextLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.5),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["I am feeling kind of hungry. Feed me 5 hotdogs and I should be full."]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI/Panel/RichTextLabel:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(2.3, 6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_fymfc"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Player:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(-84, -102)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Characters/Player:frame")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Panel:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/Panel/Label:text")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["TITLE:"]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI/Panel/RichTextLabel:text")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["Insert dialogue here"]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI/Panel/RichTextLabel:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_fymfc"]
+_data = {
+&"MakeAChoice": SubResource("Animation_7rlx5"),
+&"RESET": SubResource("Animation_fymfc")
+}
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_611mn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_qpu5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_oftq6")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_i1l8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_fnbpi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_0xrp4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qpu5d")
+}],
+"loop": true,
+"name": &"With_Ketchup",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_i1l8k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_qpu5d")
+}],
+"loop": true,
+"name": &"With_some_ketchup",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_okmvt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("7_r0n6m")
+}],
+"loop": true,
+"name": &"Holding1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_7rlx5")
+}],
+"loop": true,
+"name": &"Holding2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_fymfc")
+}],
+"loop": true,
+"name": &"Holding3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_okmvt")
+}],
+"loop": true,
+"name": &"Holding4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_y0gh3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ckb2c")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_fymfc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_fymfc")
+}],
+"loop": true,
+"name": &"IdleCutscene",
+"speed": 3.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_7rlx5"]
+
+[node name="CutsceneStart" type="Node2D"]
+script = ExtResource("1_y0gh3")
+autoplay = null
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_fymfc")
+}
+
+[node name="Bgfinal2" type="Sprite2D" parent="."]
+position = Vector2(619, 116)
+scale = Vector2(1.01667, 1.01667)
+texture = ExtResource("1_1op8x")
+
+[node name="Characters" type="Node2D" parent="."]
+position = Vector2(414, 650)
+
+[node name="Mouth" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(684, -259)
+scale = Vector2(0.7, 0.708)
+sprite_frames = SubResource("SpriteFrames_611mn")
+animation = &"Default"
+autoplay = "Default"
+
+[node name="Player" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(-84, -102)
+scale = Vector2(0.551667, 0.551667)
+sprite_frames = SubResource("SpriteFrames_okmvt")
+animation = &"IdleCutscene"
+autoplay = "Idle"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 1086)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("WorldBoundaryShape2D_7rlx5")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Panel" type="Panel" parent="UI"]
+visible = false
+offset_left = 181.0
+offset_top = 50.0
+offset_right = 981.0
+offset_bottom = 200.0
+
+[node name="Label" type="Label" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 3.0
+offset_right = 250.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 35
+text = "TITLE:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 41.0
+offset_right = 777.0
+offset_bottom = 174.0
+theme_override_fonts/normal_font = ExtResource("15_okmvt")
+theme_override_font_sizes/normal_font_size = 28
+text = "Insert dialogue here"
+scroll_active = false
