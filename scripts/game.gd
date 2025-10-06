@@ -37,6 +37,8 @@ var current_area = ""
 var nearMouthOutside= false
 var sacrifices = 0
 
+var enableChoicecutscene = false 
+
 func _ready() -> void:
 	for hotdog in hotdogs.values():
 		hotdog["speech"].visible = false
