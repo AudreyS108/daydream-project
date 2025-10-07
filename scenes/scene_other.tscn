@@ -1,0 +1,199 @@
+[gd_scene load_steps=21 format=3 uid="uid://dh7rv34hinc6x"]
+
+[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_rl5tc"]
+[ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_goj8e"]
+[ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_eokbx"]
+[ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_peg12"]
+[ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_bwm42"]
+[ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="6_u1gkb"]
+[ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="7_wrstm"]
+[ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="8_j61o6"]
+[ext_resource type="Texture2D" uid="uid://bdsr6lj0immch" path="res://assets/Sprites/CarryHotdog2.png" id="9_cgaog"]
+[ext_resource type="Texture2D" uid="uid://hj3dm0kqodlo" path="res://assets/Sprites/CarryHotdog3.png" id="10_dru2h"]
+[ext_resource type="Texture2D" uid="uid://bl7y3cu0krj82" path="res://assets/Sprites/CarryHotdog4.png" id="11_fepq1"]
+[ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="12_isoev"]
+[ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="13_eh1qk"]
+[ext_resource type="Texture2D" uid="uid://cgbnmteyrucud" path="res://assets/Sprites/Player.png" id="14_x63yg"]
+[ext_resource type="Texture2D" uid="uid://dvt1ccp0fw8bn" path="res://assets/Sprites/Player2.png" id="15_8v2ib"]
+[ext_resource type="Texture2D" uid="uid://bwwpfdaxlt2y7" path="res://assets/Sprites/black.png" id="16_ise3u"]
+[ext_resource type="FontFile" uid="uid://35s6lnabdsfb" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="17_vbu0j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_w7wlc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_eokbx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_peg12")
+}],
+"loop": true,
+"name": &"Default",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bwm42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u1gkb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_wrstm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eokbx")
+}],
+"loop": true,
+"name": &"With_Ketchup",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_bwm42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_eokbx")
+}],
+"loop": true,
+"name": &"With_some_ketchup",
+"speed": 2.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_18qsr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("8_j61o6")
+}],
+"loop": true,
+"name": &"Holding1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("9_cgaog")
+}],
+"loop": true,
+"name": &"Holding2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("10_dru2h")
+}],
+"loop": true,
+"name": &"Holding3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_fepq1")
+}],
+"loop": true,
+"name": &"Holding4",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("12_isoev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_eh1qk")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("14_x63yg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_8v2ib")
+}],
+"loop": true,
+"name": &"IdleCutscene",
+"speed": 3.0
+}]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_civax"]
+
+[node name="Scene_Other" type="Node2D"]
+
+[node name="Bgfinal2" type="Sprite2D" parent="."]
+position = Vector2(619, 116)
+scale = Vector2(1.01667, 1.01667)
+texture = ExtResource("1_rl5tc")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_goj8e")
+
+[node name="Characters" type="Node2D" parent="."]
+position = Vector2(414, 650)
+
+[node name="Mouth" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(684, -259)
+scale = Vector2(0.7, 0.708)
+sprite_frames = SubResource("SpriteFrames_w7wlc")
+animation = &"Default"
+autoplay = "Default"
+
+[node name="Player" type="AnimatedSprite2D" parent="Characters"]
+position = Vector2(239, -476)
+scale = Vector2(0.551667, 0.551667)
+sprite_frames = SubResource("SpriteFrames_18qsr")
+animation = &"IdleCutscene"
+autoplay = "IdleCutscene"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(0, 1086)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(0, -422)
+shape = SubResource("WorldBoundaryShape2D_civax")
+
+[node name="UI" type="CanvasLayer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(2922, 251)
+texture = ExtResource("16_ise3u")
+
+[node name="Panel" type="Panel" parent="UI"]
+visible = false
+offset_left = 181.0
+offset_top = 50.0
+offset_right = 981.0
+offset_bottom = 200.0
+
+[node name="Label" type="Label" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 3.0
+offset_right = 250.0
+offset_bottom = 52.0
+theme_override_font_sizes/font_size = 35
+text = "MOUTH:"
+
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 20.0
+offset_top = 41.0
+offset_right = 777.0
+offset_bottom = 174.0
+theme_override_fonts/normal_font = ExtResource("17_vbu0j")
+theme_override_font_sizes/normal_font_size = 28
+text = "Lucky last... I am almost full."
+scroll_active = false
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Label2" type="Label" parent="UI/Panel"]
+layout_mode = 0
+offset_left = 561.0
+offset_top = 9.0
+offset_right = 789.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 20
+text = "Press Enter to Continue"

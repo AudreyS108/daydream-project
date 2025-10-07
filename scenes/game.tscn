@@ -1,8 +1,9 @@
-[gd_scene load_steps=19 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=20 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scripts/game.gd" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
+[ext_resource type="PackedScene" uid="uid://kv6k3u3jjuye" path="res://scenes/Cutscene_choice.tscn" id="2_ca42v"]
 [ext_resource type="PackedScene" uid="uid://c2c6ebaepviij" path="res://scenes/Mouth.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://k2y347lvohch" path="res://assets/Sprites/Screenshot_28-9-2025_121635_www.canva.com-removebg-preview.png" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://dea3lfsr5r6cv" path="res://scripts/camera_2d.gd" id="4_u5sy4"]
@@ -29,6 +30,7 @@ distance = -11.0
 
 [node name="Game" type="Node2D"]
 script = ExtResource("1_kvuet")
+Choice_Cutscene = ExtResource("2_ca42v")
 
 [node name="Bgfinal3" type="Sprite2D" parent="."]
 position = Vector2(-1279.67, -543.5)
@@ -75,16 +77,16 @@ texture = ExtResource("12_dinhu")
 position = Vector2(798, -231)
 
 [node name="Area1" parent="." instance=ExtResource("15_rysoc")]
-position = Vector2(-490, -52)
+position = Vector2(-325, -52)
 
 [node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
-position = Vector2(-901, -52)
+position = Vector2(-736, -52)
 
 [node name="Area3" parent="." instance=ExtResource("14_trtic")]
-position = Vector2(-1306, -54)
+position = Vector2(-1141, -54)
 
 [node name="Area4" parent="." instance=ExtResource("15_ssvqc")]
-position = Vector2(-1624, -55)
+position = Vector2(-1459, -55)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(201, -48)

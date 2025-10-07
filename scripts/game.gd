@@ -1,5 +1,8 @@
 extends Node2D
 
+@export var Choice_Cutscene: PackedScene
+
+
 @onready var player_sprite: AnimatedSprite2D = $Player/AnimatedSprite2D
 @onready var audio_player1: AudioStreamPlayer2D = $Player/AudioStreamPlayer1
 @onready var audio_player2: AudioStreamPlayer2D = $Player/AudioStreamPlayer2
@@ -43,6 +46,9 @@ func _ready() -> void:
 	for hotdog in hotdogs.values():
 		hotdog["speech"].visible = false
 	X_toKill.visible = false
+
+func _changeScene():
+	get_tree().change_scene_to_packed(Choice_Cutscene)
 
 func _on_area_body_entered(area_name: String, body: Node2D) -> void:
 	if body.name != "Player": return
@@ -112,3 +118,10 @@ func _killhotdog() -> void:
 
 	mouth.play("Default")
 	audio_player2.stop()
+	
+	if sacrifices == 4:
+		await get_tree().create_timer(1.5).timeout
+		_changeScene()
+	
+ # FIX HERE
+	
