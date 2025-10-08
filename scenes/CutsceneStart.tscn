@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://gk7q5u45l026"]
+[gd_scene load_steps=27 format=3 uid="uid://gk7q5u45l026"]
 
 [ext_resource type="Script" uid="uid://d0dn78jtuded3" path="res://scenes/cutscene_Start.gd" id="1_a4faq"]
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="2_1icfg"]
@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://dvt1ccp0fw8bn" path="res://assets/Sprites/Player2.png" id="15_i2xkx"]
 [ext_resource type="FontFile" uid="uid://35s6lnabdsfb" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="16_dkw1w"]
 [ext_resource type="AudioStream" uid="uid://dhwi5hcpws2t" path="res://assets/Sounds/happy-kids-background-music-364459.wav" id="19_chm6r"]
+[ext_resource type="Texture2D" uid="uid://bwwpfdaxlt2y7" path="res://assets/Sprites/black.png" id="20_mfsmj"]
 
 [sub_resource type="Animation" id="Animation_7rlx5"]
 resource_name = "MakeAChoice"
@@ -372,3 +373,7 @@ position = Vector2(0, 1086)
 stream = ExtResource("19_chm6r")
 volume_db = -22.851
 autoplay = true
+
+[node name="Black" type="Sprite2D" parent="."]
+position = Vector2(-1563, 128)
+texture = ExtResource("20_mfsmj")

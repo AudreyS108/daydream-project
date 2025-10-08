@@ -1,130 +1,74 @@
-[gd_scene load_steps=21 format=3 uid="uid://dh7rv34hinc6x"]
+[gd_scene load_steps=10 format=3 uid="uid://dh7rv34hinc6x"]
 
-[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_rl5tc"]
 [ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_goj8e"]
-[ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_eokbx"]
-[ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_peg12"]
-[ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_bwm42"]
-[ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="6_u1gkb"]
-[ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="7_wrstm"]
-[ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="8_j61o6"]
-[ext_resource type="Texture2D" uid="uid://bdsr6lj0immch" path="res://assets/Sprites/CarryHotdog2.png" id="9_cgaog"]
-[ext_resource type="Texture2D" uid="uid://hj3dm0kqodlo" path="res://assets/Sprites/CarryHotdog3.png" id="10_dru2h"]
-[ext_resource type="Texture2D" uid="uid://bl7y3cu0krj82" path="res://assets/Sprites/CarryHotdog4.png" id="11_fepq1"]
-[ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="12_isoev"]
-[ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="13_eh1qk"]
-[ext_resource type="Texture2D" uid="uid://cgbnmteyrucud" path="res://assets/Sprites/Player.png" id="14_x63yg"]
-[ext_resource type="Texture2D" uid="uid://dvt1ccp0fw8bn" path="res://assets/Sprites/Player2.png" id="15_8v2ib"]
+[ext_resource type="Texture2D" uid="uid://dsbt83bylmoev" path="res://assets/Sprites/black2.png" id="4_pvk50"]
+[ext_resource type="Texture2D" uid="uid://bpytf7u1ffsda" path="res://assets/Sprites/mouthPLACEHOLDER.png" id="5_h8wby"]
 [ext_resource type="Texture2D" uid="uid://bwwpfdaxlt2y7" path="res://assets/Sprites/black.png" id="16_ise3u"]
 [ext_resource type="FontFile" uid="uid://35s6lnabdsfb" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="17_vbu0j"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w7wlc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_eokbx")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_peg12")
-}],
-"loop": true,
-"name": &"Default",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_bwm42")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_u1gkb")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_wrstm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_eokbx")
-}],
-"loop": true,
-"name": &"With_Ketchup",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_bwm42")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_eokbx")
-}],
-"loop": true,
-"name": &"With_some_ketchup",
-"speed": 2.0
-}]
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_18qsr"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_j61o6")
-}],
-"loop": true,
-"name": &"Holding1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_cgaog")
-}],
-"loop": true,
-"name": &"Holding2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_dru2h")
-}],
-"loop": true,
-"name": &"Holding3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_fepq1")
-}],
-"loop": true,
-"name": &"Holding4",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_isoev")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_eh1qk")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_x63yg")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_8v2ib")
-}],
-"loop": true,
-"name": &"IdleCutscene",
-"speed": 3.0
-}]
-
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_civax"]
 
-[node name="Scene_Other" type="Node2D"]
+[sub_resource type="Animation" id="Animation_pvk50"]
+resource_name = "jumpscare"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/MouthPlaceholder:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.84, 0.84), Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Black2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
-[node name="Bgfinal2" type="Sprite2D" parent="."]
-position = Vector2(619, 116)
-scale = Vector2(1.01667, 1.01667)
-texture = ExtResource("1_rl5tc")
+[sub_resource type="Animation" id="Animation_h8wby"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("UI/MouthPlaceholder:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.841026, 0.841026)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Black2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h8wby"]
+_data = {
+&"RESET": SubResource("Animation_h8wby"),
+&"jumpscare": SubResource("Animation_pvk50")
+}
+
+[node name="Scene_Other" type="Node2D"]
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_goj8e")
@@ -132,19 +76,7 @@ stream = ExtResource("2_goj8e")
 [node name="Characters" type="Node2D" parent="."]
 position = Vector2(414, 650)
 
-[node name="Mouth" type="AnimatedSprite2D" parent="Characters"]
-position = Vector2(684, -259)
-scale = Vector2(0.7, 0.708)
-sprite_frames = SubResource("SpriteFrames_w7wlc")
-animation = &"Default"
-autoplay = "Default"
-
-[node name="Player" type="AnimatedSprite2D" parent="Characters"]
-position = Vector2(239, -476)
-scale = Vector2(0.551667, 0.551667)
-sprite_frames = SubResource("SpriteFrames_18qsr")
-animation = &"IdleCutscene"
-autoplay = "IdleCutscene"
+[node name="Sprite2D" type="Sprite2D" parent="Characters"]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 1086)
@@ -157,7 +89,7 @@ shape = SubResource("WorldBoundaryShape2D_civax")
 
 [node name="Sprite2D" type="Sprite2D" parent="UI"]
 modulate = Color(1, 1, 1, 0.784314)
-position = Vector2(2922, 251)
+position = Vector2(628, 76)
 texture = ExtResource("16_ise3u")
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -197,3 +129,18 @@ offset_right = 789.0
 offset_bottom = 37.0
 theme_override_font_sizes/font_size = 20
 text = "Press Enter to Continue"
+
+[node name="Black2" type="Sprite2D" parent="UI"]
+position = Vector2(635, 1516)
+texture = ExtResource("4_pvk50")
+
+[node name="MouthPlaceholder" type="Sprite2D" parent="UI"]
+position = Vector2(593, 322)
+scale = Vector2(0.841026, 0.841026)
+texture = ExtResource("5_h8wby")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_h8wby")
+}
+autoplay = "jumpscare"
