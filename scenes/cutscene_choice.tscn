@@ -305,8 +305,8 @@ animations = [{
 [node name="Cutscene_choice" type="Node2D" node_paths=PackedStringArray("animationPlr")]
 script = ExtResource("1_xyiu4")
 animationPlr = NodePath("AnimationPlayer")
-self_scene = ExtResource("2_rr2ql")
 other_scene = ExtResource("3_lgcvu")
+self_scene = ExtResource("2_rr2ql")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {

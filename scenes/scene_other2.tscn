@@ -1,31 +1,31 @@
-[gd_scene load_steps=21 format=3 uid="uid://dh7rv34hinc6x"]
+[gd_scene load_steps=21 format=3 uid="uid://dpd12loco82vh"]
 
-[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_rl5tc"]
-[ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_goj8e"]
-[ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_eokbx"]
-[ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_peg12"]
-[ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_bwm42"]
-[ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="6_u1gkb"]
-[ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="7_wrstm"]
-[ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="8_j61o6"]
-[ext_resource type="Texture2D" uid="uid://bdsr6lj0immch" path="res://assets/Sprites/CarryHotdog2.png" id="9_cgaog"]
-[ext_resource type="Texture2D" uid="uid://hj3dm0kqodlo" path="res://assets/Sprites/CarryHotdog3.png" id="10_dru2h"]
-[ext_resource type="Texture2D" uid="uid://bl7y3cu0krj82" path="res://assets/Sprites/CarryHotdog4.png" id="11_fepq1"]
-[ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="12_isoev"]
-[ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="13_eh1qk"]
-[ext_resource type="Texture2D" uid="uid://cgbnmteyrucud" path="res://assets/Sprites/Player.png" id="14_x63yg"]
-[ext_resource type="Texture2D" uid="uid://dvt1ccp0fw8bn" path="res://assets/Sprites/Player2.png" id="15_8v2ib"]
-[ext_resource type="AudioStream" uid="uid://cmgjaymmsxkfh" path="res://assets/Sounds/cleaned_Lasthotdogleft.mp3" id="17_rl5tc"]
-[ext_resource type="FontFile" uid="uid://35s6lnabdsfb" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="17_vbu0j"]
+[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_hohua"]
+[ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_d6mhn"]
+[ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_ba5ek"]
+[ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_8h7x7"]
+[ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_o1ona"]
+[ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="6_50kd3"]
+[ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="7_h6qdy"]
+[ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="8_4amya"]
+[ext_resource type="Texture2D" uid="uid://bdsr6lj0immch" path="res://assets/Sprites/CarryHotdog2.png" id="9_5yjh2"]
+[ext_resource type="Texture2D" uid="uid://hj3dm0kqodlo" path="res://assets/Sprites/CarryHotdog3.png" id="10_4k0u8"]
+[ext_resource type="Texture2D" uid="uid://bl7y3cu0krj82" path="res://assets/Sprites/CarryHotdog4.png" id="11_8d1dq"]
+[ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="12_briyw"]
+[ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="13_keeyp"]
+[ext_resource type="Texture2D" uid="uid://cgbnmteyrucud" path="res://assets/Sprites/Player.png" id="14_2vss1"]
+[ext_resource type="Texture2D" uid="uid://dvt1ccp0fw8bn" path="res://assets/Sprites/Player2.png" id="15_oaii1"]
+[ext_resource type="FontFile" uid="uid://35s6lnabdsfb" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="16_ww23d"]
+[ext_resource type="AudioStream" uid="uid://cmgjaymmsxkfh" path="res://assets/Sounds/cleaned_Lasthotdogleft.mp3" id="17_ey88a"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tjqub"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_eokbx")
+"texture": ExtResource("3_ba5ek")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_peg12")
+"texture": ExtResource("4_8h7x7")
 }],
 "loop": true,
 "name": &"Default",
@@ -33,16 +33,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_bwm42")
+"texture": ExtResource("5_o1ona")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_u1gkb")
+"texture": ExtResource("6_50kd3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_wrstm")
+"texture": ExtResource("7_h6qdy")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_eokbx")
+"texture": ExtResource("3_ba5ek")
 }],
 "loop": true,
 "name": &"With_Ketchup",
@@ -50,10 +50,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_bwm42")
+"texture": ExtResource("5_o1ona")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_eokbx")
+"texture": ExtResource("3_ba5ek")
 }],
 "loop": true,
 "name": &"With_some_ketchup",
@@ -64,7 +64,7 @@ animations = [{
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("8_j61o6")
+"texture": ExtResource("8_4amya")
 }],
 "loop": true,
 "name": &"Holding1",
@@ -72,7 +72,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("9_cgaog")
+"texture": ExtResource("9_5yjh2")
 }],
 "loop": true,
 "name": &"Holding2",
@@ -80,7 +80,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("10_dru2h")
+"texture": ExtResource("10_4k0u8")
 }],
 "loop": true,
 "name": &"Holding3",
@@ -88,7 +88,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("11_fepq1")
+"texture": ExtResource("11_8d1dq")
 }],
 "loop": true,
 "name": &"Holding4",
@@ -96,10 +96,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("12_isoev")
+"texture": ExtResource("12_briyw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("13_eh1qk")
+"texture": ExtResource("13_keeyp")
 }],
 "loop": true,
 "name": &"Idle",
@@ -107,10 +107,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("14_x63yg")
+"texture": ExtResource("14_2vss1")
 }, {
 "duration": 1.0,
-"texture": ExtResource("15_8v2ib")
+"texture": ExtResource("15_oaii1")
 }],
 "loop": true,
 "name": &"IdleCutscene",
@@ -124,10 +124,10 @@ animations = [{
 [node name="Bgfinal2" type="Sprite2D" parent="."]
 position = Vector2(619, 116)
 scale = Vector2(1.01667, 1.01667)
-texture = ExtResource("1_rl5tc")
+texture = ExtResource("1_hohua")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_goj8e")
+stream = ExtResource("2_d6mhn")
 
 [node name="Characters" type="Node2D" parent="."]
 position = Vector2(414, 650)
@@ -177,7 +177,7 @@ offset_left = 20.0
 offset_top = 41.0
 offset_right = 777.0
 offset_bottom = 174.0
-theme_override_fonts/normal_font = ExtResource("17_vbu0j")
+theme_override_fonts/normal_font = ExtResource("16_ww23d")
 theme_override_font_sizes/normal_font_size = 28
 text = "Lucky last... I am almost full."
 scroll_active = false
@@ -194,4 +194,4 @@ theme_override_font_sizes/font_size = 20
 text = "Press Enter to Continue"
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("17_rl5tc")
+stream = ExtResource("17_ey88a")

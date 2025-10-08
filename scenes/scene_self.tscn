@@ -1,197 +1,210 @@
-[gd_scene load_steps=21 format=3 uid="uid://dlk4ndxu1ollq"]
+[gd_scene load_steps=11 format=3 uid="uid://dlk4ndxu1ollq"]
 
-[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_t5xs6"]
-[ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_jpagh"]
-[ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_3suxq"]
-[ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_yuouy"]
-[ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_jqq6p"]
-[ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="6_ii4mk"]
-[ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="7_yh1cs"]
-[ext_resource type="Texture2D" uid="uid://gilg06xgxgva" path="res://assets/Sprites/CarryHotdog.png" id="8_oevud"]
-[ext_resource type="Texture2D" uid="uid://bdsr6lj0immch" path="res://assets/Sprites/CarryHotdog2.png" id="9_4ibcs"]
-[ext_resource type="Texture2D" uid="uid://hj3dm0kqodlo" path="res://assets/Sprites/CarryHotdog3.png" id="10_set8d"]
-[ext_resource type="Texture2D" uid="uid://bl7y3cu0krj82" path="res://assets/Sprites/CarryHotdog4.png" id="11_yorud"]
-[ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="12_c1if3"]
-[ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="13_hu3am"]
-[ext_resource type="Texture2D" uid="uid://cgbnmteyrucud" path="res://assets/Sprites/Player.png" id="14_fbn0u"]
-[ext_resource type="Texture2D" uid="uid://dvt1ccp0fw8bn" path="res://assets/Sprites/Player2.png" id="15_rg8kl"]
-[ext_resource type="FontFile" uid="uid://35s6lnabdsfb" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="17_888of"]
-[ext_resource type="AudioStream" uid="uid://cmgjaymmsxkfh" path="res://assets/Sounds/cleaned_Lasthotdogleft.mp3" id="17_t5xs6"]
+[ext_resource type="Script" uid="uid://usfi5bgrpjdo" path="res://scenes/scene_self.gd" id="1_ffm3f"]
+[ext_resource type="AudioStream" uid="uid://wp8t8jqfnswj" path="res://assets/Sounds/fuzzy-jumpscare-80560.mp3" id="1_n8vwj"]
+[ext_resource type="Texture2D" uid="uid://bwwpfdaxlt2y7" path="res://assets/Sprites/black.png" id="2_h8qup"]
+[ext_resource type="Texture2D" uid="uid://bpytf7u1ffsda" path="res://assets/Sprites/mouthPLACEHOLDER.png" id="4_ffm3f"]
+[ext_resource type="Texture2D" uid="uid://dsbt83bylmoev" path="res://assets/Sprites/black2.png" id="5_8ljbc"]
+[ext_resource type="FontFile" uid="uid://df35d21we4vae" path="res://assets/Fonts/hacked-font/Hacked-KerX.ttf" id="6_h8qup"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_tjqub"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("3_3suxq")
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_civax"]
+
+[sub_resource type="Animation" id="Animation_pvk50"]
+resource_name = "jumpscare"
+length = 5.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/MouthPlaceholder:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0.84, 0.84), Vector2(3, 3)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Black2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [false, true]
+}
+tracks/2/type = "method"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath(".")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"values": [{
+"args": [],
+"method": &"_playSound"
 }, {
-"duration": 1.0,
-"texture": ExtResource("4_yuouy")
-}],
-"loop": true,
-"name": &"Default",
-"speed": 2.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_jqq6p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("6_ii4mk")
-}, {
-"duration": 1.0,
-"texture": ExtResource("7_yh1cs")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_3suxq")
-}],
-"loop": true,
-"name": &"With_Ketchup",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_jqq6p")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_3suxq")
-}],
-"loop": true,
-"name": &"With_some_ketchup",
-"speed": 2.0
+"args": [],
+"method": &"_playSound2"
 }]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/Black2/RichTextLabel:visible_ratio")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(1.5, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI/Black2/Button:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_1rsp6"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("8_oevud")
-}],
-"loop": true,
-"name": &"Holding1",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("9_4ibcs")
-}],
-"loop": true,
-"name": &"Holding2",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("10_set8d")
-}],
-"loop": true,
-"name": &"Holding3",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("11_yorud")
-}],
-"loop": true,
-"name": &"Holding4",
-"speed": 5.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("12_c1if3")
-}, {
-"duration": 1.0,
-"texture": ExtResource("13_hu3am")
-}],
-"loop": true,
-"name": &"Idle",
-"speed": 3.0
-}, {
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("14_fbn0u")
-}, {
-"duration": 1.0,
-"texture": ExtResource("15_rg8kl")
-}],
-"loop": true,
-"name": &"IdleCutscene",
-"speed": 3.0
-}]
+[sub_resource type="Animation" id="Animation_h8wby"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/MouthPlaceholder:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.841026, 0.841026)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Black2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Black2/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("UI/Black2/Button:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qkfln"]
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_h8wby"]
+_data = {
+&"RESET": SubResource("Animation_h8wby"),
+&"jumpscare": SubResource("Animation_pvk50")
+}
 
 [node name="Scene_Self" type="Node2D"]
-
-[node name="Bgfinal2" type="Sprite2D" parent="."]
-position = Vector2(619, 116)
-scale = Vector2(1.01667, 1.01667)
-texture = ExtResource("1_t5xs6")
+script = ExtResource("1_ffm3f")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("2_jpagh")
+stream = ExtResource("1_n8vwj")
+volume_db = -5.403
 
 [node name="Characters" type="Node2D" parent="."]
 position = Vector2(414, 650)
 
-[node name="Mouth" type="AnimatedSprite2D" parent="Characters"]
-position = Vector2(684, -259)
-scale = Vector2(0.7, 0.708)
-sprite_frames = SubResource("SpriteFrames_tjqub")
-animation = &"Default"
-autoplay = "Default"
+[node name="Sprite2D2" type="Sprite2D" parent="Characters"]
+modulate = Color(1, 1, 1, 0.784314)
+position = Vector2(214, -574)
+texture = ExtResource("2_h8qup")
 
-[node name="Player" type="AnimatedSprite2D" parent="Characters"]
-position = Vector2(-147, -406)
-scale = Vector2(0.551667, 0.551667)
-sprite_frames = SubResource("SpriteFrames_1rsp6")
-animation = &"IdleCutscene"
-autoplay = "IdleCutscene"
+[node name="MouthPlaceholder" type="Sprite2D" parent="Characters"]
+position = Vector2(179, -328)
+scale = Vector2(0.841026, 0.841026)
+texture = ExtResource("4_ffm3f")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
 position = Vector2(0, 1086)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 position = Vector2(0, -422)
-shape = SubResource("WorldBoundaryShape2D_qkfln")
+shape = SubResource("WorldBoundaryShape2D_civax")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Panel" parent="UI"]
-visible = false
-offset_left = 181.0
-offset_top = 50.0
-offset_right = 981.0
-offset_bottom = 200.0
+[node name="Black2" type="Sprite2D" parent="UI"]
+position = Vector2(992.5, 741)
+scale = Vector2(1.36084, 1.42154)
+texture = ExtResource("5_8ljbc")
 
-[node name="Label" type="Label" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 3.0
-offset_right = 250.0
-offset_bottom = 52.0
-theme_override_font_sizes/font_size = 35
-text = "MOUTH:"
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Black2"]
+offset_left = -721.981
+offset_top = -497.348
+offset_right = 78.0194
+offset_bottom = -34.3485
+theme_override_fonts/normal_font = ExtResource("6_h8qup")
+theme_override_font_sizes/normal_font_size = 55
+text = "GAME OVER
 
-[node name="RichTextLabel" type="RichTextLabel" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 41.0
-offset_right = 777.0
-offset_bottom = 174.0
-theme_override_fonts/normal_font = ExtResource("17_888of")
-theme_override_font_sizes/normal_font_size = 28
-text = "Lucky last... I am almost full."
-scroll_active = false
+SElf sacrifice ending
+
+Play again?"
+horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
 
-[node name="Label2" type="Label" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 561.0
-offset_top = 9.0
-offset_right = 789.0
-offset_bottom = 37.0
-theme_override_font_sizes/font_size = 20
-text = "Press Enter to Continue"
+[node name="Button" type="Button" parent="UI/Black2"]
+offset_left = -523.574
+offset_top = -180.087
+offset_right = -123.574
+offset_bottom = -100.087
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
+theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 1
+theme_override_fonts/font = ExtResource("6_h8qup")
+theme_override_font_sizes/font_size = 45
+text = "Restart game"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_h8wby")
+}
+autoplay = "jumpscare"
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-stream = ExtResource("17_t5xs6")
+
+[connection signal="pressed" from="UI/Black2/Button" to="." method="_on_button1_pressed"]
