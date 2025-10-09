@@ -1,9 +1,9 @@
 [gd_scene load_steps=27 format=3 uid="uid://gk7q5u45l026"]
 
 [ext_resource type="Script" uid="uid://d0dn78jtuded3" path="res://scenes/cutscene_Start.gd" id="1_a4faq"]
-[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="2_1icfg"]
 [ext_resource type="PackedScene" uid="uid://lhoagjgbcmbs" path="res://scenes/game.tscn" id="2_a4faq"]
 [ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_a4faq"]
+[ext_resource type="Texture2D" uid="uid://ceoessvn8ckdc" path="res://assets/Sprites/pixil-frame-0 (11).png" id="3_mfsmj"]
 [ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="4_a4faq"]
 [ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_chm6r"]
 [ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_mfsmj"]
@@ -308,10 +308,10 @@ libraries = {
 }
 autoplay = "MakeAChoice"
 
-[node name="Bgfinal2" type="Sprite2D" parent="."]
-position = Vector2(619, 116)
-scale = Vector2(1.01667, 1.01667)
-texture = ExtResource("2_1icfg")
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(-730, 92.999886)
+scale = Vector2(1.8866667, 1.8866667)
+texture = ExtResource("3_mfsmj")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("4_a4faq")

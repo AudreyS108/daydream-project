@@ -1,8 +1,8 @@
 [gd_scene load_steps=30 format=3 uid="uid://dh7rv34hinc6x"]
 
-[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_rl5tc"]
 [ext_resource type="Script" uid="uid://d2rrfajp1poc0" path="res://scenes/scene_other.gd" id="1_u1gkb"]
 [ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_goj8e"]
+[ext_resource type="Texture2D" uid="uid://ceoessvn8ckdc" path="res://assets/Sprites/pixil-frame-0 (11).png" id="2_wrstm"]
 [ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_eokbx"]
 [ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_peg12"]
 [ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_bwm42"]
@@ -281,10 +281,16 @@ _data = {
 [node name="Scene_other" type="Node2D"]
 script = ExtResource("1_u1gkb")
 
-[node name="Bgfinal2" type="Sprite2D" parent="."]
-position = Vector2(619, 116)
-scale = Vector2(1.01667, 1.01667)
-texture = ExtResource("1_rl5tc")
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(-720.0001, 94.00001)
+scale = Vector2(1.8866667, 1.8866667)
+texture = ExtResource("2_wrstm")
+
+[node name="Black2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.39215687)
+position = Vector2(-2628.0002, -769.0002)
+scale = Vector2(3.7337208, 1.8866667)
+texture = ExtResource("18_eokbx")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_goj8e")

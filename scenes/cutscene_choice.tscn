@@ -1,12 +1,12 @@
 [gd_scene load_steps=29 format=3 uid="uid://kv6k3u3jjuye"]
 
-[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_8npy3"]
 [ext_resource type="Script" uid="uid://ym8rvbwwj6ai" path="res://scenes/cutscene_choice.gd" id="1_xyiu4"]
 [ext_resource type="PackedScene" uid="uid://dlk4ndxu1ollq" path="res://scenes/scene_self.tscn" id="2_rr2ql"]
 [ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_xyiu4"]
 [ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_3ur32"]
 [ext_resource type="PackedScene" uid="uid://dh7rv34hinc6x" path="res://scenes/scene_other.tscn" id="3_lgcvu"]
 [ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_177xo"]
+[ext_resource type="Texture2D" uid="uid://ceoessvn8ckdc" path="res://assets/Sprites/pixil-frame-0 (11).png" id="4_qn43c"]
 [ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_rr2ql"]
 [ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="6_lgcvu"]
 [ext_resource type="Texture2D" uid="uid://8mj6nb8ukygq" path="res://assets/Sprites/unnamed5.png" id="7_qn43c"]
@@ -316,10 +316,16 @@ libraries = {
 }
 autoplay = "Choice_cutscene"
 
-[node name="Bgfinal2" type="Sprite2D" parent="."]
-position = Vector2(619, 116)
-scale = Vector2(1.01667, 1.01667)
-texture = ExtResource("1_8npy3")
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(-289.00006, 94.99988)
+scale = Vector2(1.8866667, 1.8866667)
+texture = ExtResource("4_qn43c")
+
+[node name="Black" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.39215687)
+position = Vector2(-319, -197.00006)
+scale = Vector2(1.9790039, 1)
+texture = ExtResource("18_3ur32")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_xyiu4")
