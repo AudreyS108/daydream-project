@@ -51,7 +51,7 @@ tracks/2/keys = {
 
 [sub_resource type="Animation" id="Animation_pvk50"]
 resource_name = "jumpscare"
-length = 8.0
+length = 10.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -100,7 +100,7 @@ tracks/3/path = NodePath("UI/Black2/RichTextLabel:visible_ratio")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.5, 8),
+"times": PackedFloat32Array(1.5, 9.96667),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
@@ -152,17 +152,20 @@ offset_top = -501.569
 offset_right = 97.1257
 offset_bottom = -38.5692
 theme_override_fonts/normal_font = ExtResource("6_h8qup")
-theme_override_font_sizes/normal_font_size = 55
+theme_override_font_sizes/normal_font_size = 48
 text = "GAME OVER
 
-SElf sacrifice ending
+You died but saved another
 
 Can you unlock the other ending?
 
-Reload web page to play again"
+Reload web page to play again
+
+Thanks for playing!"
 horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
+metadata/_edit_use_anchors_ = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
