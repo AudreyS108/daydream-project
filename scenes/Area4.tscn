@@ -35,10 +35,9 @@ offset_right = 204.817
 offset_bottom = 39.6395
 theme_override_colors/font_color = Color(0.00117341, 0.000405727, 0.00140292, 1)
 theme_override_font_sizes/font_size = 22
-text = "Hey honey, I know you have 
-to do this... It's alright. I have
- lived long enough, its okay... "
-metadata/_edit_use_anchors_ = true
+text = "Hey honey... it's okay if you
+sacrifice me. I know you have
+to do this. It's alright..."
 
 [node name="Label2" type="Label" parent="Sprite2D/Speechbubble2"]
 offset_left = -149.183

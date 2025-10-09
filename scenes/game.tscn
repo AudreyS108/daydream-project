@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=21 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scripts/game.gd" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://doij8y8ecudvq" path="res://scenes/MouthArea.tscn" id="15_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bv0hcj1b2hqyp" path="res://scenes/Area1.tscn" id="15_rysoc"]
 [ext_resource type="PackedScene" uid="uid://dnkckk8cmgjll" path="res://scenes/Area4.tscn" id="15_ssvqc"]
+[ext_resource type="AudioStream" uid="uid://cmye3bvgkehe0" path="res://assets/Sounds/Silent Hill 2 OST - Black Fairy In-Game Version.mp3" id="17_rysoc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
@@ -67,6 +68,8 @@ shape = SubResource("WorldBoundaryShape2D_lnu2h")
 stream = ExtResource("5_ir15t")
 volume_db = -2.971
 autoplay = true
+max_distance = 1400.0
+attenuation = 0.83021164
 
 [node name="BasketOfHotdogs" type="Sprite2D" parent="."]
 position = Vector2(-580, 256)
@@ -77,16 +80,16 @@ texture = ExtResource("12_dinhu")
 position = Vector2(798, -231)
 
 [node name="Area1" parent="." instance=ExtResource("15_rysoc")]
-position = Vector2(-325, -52)
+position = Vector2(-1344, -52)
 
 [node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
-position = Vector2(-736, -52)
+position = Vector2(-1013, -52)
 
 [node name="Area3" parent="." instance=ExtResource("14_trtic")]
-position = Vector2(-1141, -54)
+position = Vector2(-610, -54)
 
 [node name="Area4" parent="." instance=ExtResource("15_ssvqc")]
-position = Vector2(-1459, -55)
+position = Vector2(-1781, -55)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(201, -48)
@@ -139,6 +142,14 @@ metadata/_edit_use_anchors_ = true
 position = Vector2(579, 118)
 scale = Vector2(0.893497, 0.893496)
 texture = ExtResource("4_lbhrr")
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1905, 0)
+stream = ExtResource("17_rysoc")
+volume_db = 1.0
+autoplay = true
+max_distance = 980.0
+attenuation = 1.5492293
 
 [connection signal="body_entered" from="MouthArea" to="." method="_on_mouth_area_body_entered"]
 [connection signal="body_exited" from="MouthArea" to="." method="_on_mouth_area_body_exited"]
