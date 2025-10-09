@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://dlk4ndxu1ollq"]
+[gd_scene load_steps=12 format=3 uid="uid://dlk4ndxu1ollq"]
 
 [ext_resource type="Script" uid="uid://usfi5bgrpjdo" path="res://scenes/scene_self.gd" id="1_ffm3f"]
 [ext_resource type="AudioStream" uid="uid://wp8t8jqfnswj" path="res://assets/Sounds/fuzzy-jumpscare-80560.mp3" id="1_n8vwj"]
@@ -6,12 +6,52 @@
 [ext_resource type="Texture2D" uid="uid://bpytf7u1ffsda" path="res://assets/Sprites/mouthPLACEHOLDER.png" id="4_ffm3f"]
 [ext_resource type="Texture2D" uid="uid://dsbt83bylmoev" path="res://assets/Sprites/black2.png" id="5_8ljbc"]
 [ext_resource type="FontFile" uid="uid://df35d21we4vae" path="res://assets/Fonts/hacked-font/Hacked-KerX.ttf" id="6_h8qup"]
+[ext_resource type="AudioStream" uid="uid://dskvbuyxpywsl" path="res://assets/Sounds/electric-buzz-8456.mp3" id="7_ffm3f"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_civax"]
 
+[sub_resource type="Animation" id="Animation_h8wby"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/MouthPlaceholder:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0.841026, 0.841026)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("UI/Black2:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Black2/RichTextLabel:visible_ratio")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
 [sub_resource type="Animation" id="Animation_pvk50"]
 resource_name = "jumpscare"
-length = 5.0
+length = 8.0
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
@@ -60,73 +100,10 @@ tracks/3/path = NodePath("UI/Black2/RichTextLabel:visible_ratio")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(1.5, 5),
+"times": PackedFloat32Array(1.5, 8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 0,
 "values": [0.0, 1.0]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("UI/Black2/Button:visible")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0, 5),
-"transitions": PackedFloat32Array(1, 1),
-"update": 1,
-"values": [false, true]
-}
-
-[sub_resource type="Animation" id="Animation_h8wby"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Characters/MouthPlaceholder:scale")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(0.841026, 0.841026)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("UI/Black2:visible")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [true]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("UI/Black2/RichTextLabel:visible_ratio")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [0.0]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("UI/Black2/Button:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [true]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_h8wby"]
@@ -140,7 +117,7 @@ script = ExtResource("1_ffm3f")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("1_n8vwj")
-volume_db = -5.403
+volume_db = 6.0
 
 [node name="Characters" type="Node2D" parent="."]
 position = Vector2(414, 650)
@@ -170,34 +147,22 @@ scale = Vector2(1.36084, 1.42154)
 texture = ExtResource("5_8ljbc")
 
 [node name="RichTextLabel" type="RichTextLabel" parent="UI/Black2"]
-offset_left = -721.981
-offset_top = -497.348
-offset_right = 78.0194
-offset_bottom = -34.3485
+offset_left = -702.875
+offset_top = -501.569
+offset_right = 97.1257
+offset_bottom = -38.5692
 theme_override_fonts/normal_font = ExtResource("6_h8qup")
 theme_override_font_sizes/normal_font_size = 55
 text = "GAME OVER
 
 SElf sacrifice ending
 
-Play again?"
+Can you unlock the other ending?
+
+Reload web page to play again"
 horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
-
-[node name="Button" type="Button" parent="UI/Black2"]
-offset_left = -523.574
-offset_top = -180.087
-offset_right = -123.574
-offset_bottom = -100.087
-theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
-theme_override_colors/font_hover_color = Color(0, 0, 0, 1)
-theme_override_colors/icon_disabled_color = Color(1, 1, 1, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 1
-theme_override_fonts/font = ExtResource("6_h8qup")
-theme_override_font_sizes/font_size = 45
-text = "Restart game"
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
@@ -206,5 +171,5 @@ libraries = {
 autoplay = "jumpscare"
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
-
-[connection signal="pressed" from="UI/Black2/Button" to="." method="_on_button1_pressed"]
+stream = ExtResource("7_ffm3f")
+volume_db = 5.0
