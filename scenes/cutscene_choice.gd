@@ -39,6 +39,7 @@ func _playSound():
 func _playSound2():
 	audioPLR2.stream = load("res://assets/Sounds/LastHotdogPT1.mp3")
 	audioPLR2.play()
+	
 
 func _playSound3():
 	audioPLR3.stream = load("res://assets/Sounds/LastHotdogPT2.mp3")

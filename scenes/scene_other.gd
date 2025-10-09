@@ -29,11 +29,14 @@ func _playSound():
 	audioPLR.play()
 	
 func _playSound2():
-	audioPLR2.stream = load("res://assets/Sounds/LastHotdogPT1.mp3")
+	audioPLR2.stream = load("res://assets/Sounds/nono (1).wav")
 	audioPLR2.play()
+	await get_tree().create_timer(2).timeout
+	audioPLR3.stream = load("res://assets/Sounds/crunchie mm.mp3")
+	audioPLR3.play()
 
 func _playSound3():
-	audioPLR3.stream = load("res://assets/Sounds/LastHotdogPT2.mp3")
+	audioPLR3.stream = load("res://assets/Sounds/electric-buzz-8456.mp3")
 	audioPLR3.play()
 	
 func _changeScene1():
