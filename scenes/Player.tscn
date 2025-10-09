@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://cqxcdhfp1tm65"]
+[gd_scene load_steps=12 format=3 uid="uid://cqxcdhfp1tm65"]
 
 [ext_resource type="Script" uid="uid://cll0wm4eiwo6q" path="res://scripts/player.gd" id="1_3li8b"]
 [ext_resource type="Texture2D" uid="uid://kbjmgpma3xr3" path="res://assets/Sprites/PlayerNormal1.png" id="1_v6fml"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bdsr6lj0immch" path="res://assets/Sprites/CarryHotdog2.png" id="3_qu4a1"]
 [ext_resource type="Texture2D" uid="uid://hj3dm0kqodlo" path="res://assets/Sprites/CarryHotdog3.png" id="4_70d11"]
 [ext_resource type="Texture2D" uid="uid://bl7y3cu0krj82" path="res://assets/Sprites/CarryHotdog4.png" id="5_cw2d6"]
+[ext_resource type="Texture2D" uid="uid://b407infuwvx3y" path="res://assets/Sprites/CarryHotdog5.png" id="6_khinc"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mdl7e"]
 animations = [{
@@ -44,6 +45,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("6_khinc")
+}],
+"loop": true,
+"name": &"Holding5",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_v6fml")
 }, {
 "duration": 1.0,
@@ -67,7 +76,7 @@ script = ExtResource("1_3li8b")
 position = Vector2(-99.5, -118.695)
 scale = Vector2(0.551667, 0.551667)
 sprite_frames = SubResource("SpriteFrames_mdl7e")
-animation = &"Holding4"
+animation = &"Holding5"
 autoplay = "Idle"
 
 [node name="AttackArea" type="Area2D" parent="AnimatedSprite2D"]
