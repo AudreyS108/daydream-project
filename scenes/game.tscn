@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=22 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scripts/game.gd" id="1_kvuet"]
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://doij8y8ecudvq" path="res://scenes/MouthArea.tscn" id="15_ir15t"]
 [ext_resource type="PackedScene" uid="uid://bv0hcj1b2hqyp" path="res://scenes/Area1.tscn" id="15_rysoc"]
 [ext_resource type="PackedScene" uid="uid://dnkckk8cmgjll" path="res://scenes/Area4.tscn" id="15_ssvqc"]
+[ext_resource type="AudioStream" uid="uid://cmye3bvgkehe0" path="res://assets/Sounds/Silent Hill 2 OST - Black Fairy In-Game Version.mp3" id="17_rysoc"]
+[ext_resource type="PackedScene" uid="uid://b7og7e1sem1b4" path="res://Area5.tscn" id="18_ssvqc"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_yqjtg"]
 distance = 28.0
@@ -31,6 +33,11 @@ distance = -11.0
 [node name="Game" type="Node2D"]
 script = ExtResource("1_kvuet")
 Choice_Cutscene = ExtResource("2_ca42v")
+
+[node name="Bgfinal4" type="Sprite2D" parent="."]
+position = Vector2(-2576, -555)
+scale = Vector2(1.03926, 1.03926)
+texture = ExtResource("1_lnu2h")
 
 [node name="Bgfinal3" type="Sprite2D" parent="."]
 position = Vector2(-1279.67, -543.5)
@@ -67,6 +74,8 @@ shape = SubResource("WorldBoundaryShape2D_lnu2h")
 stream = ExtResource("5_ir15t")
 volume_db = -2.971
 autoplay = true
+max_distance = 1400.0
+attenuation = 0.830212
 
 [node name="BasketOfHotdogs" type="Sprite2D" parent="."]
 position = Vector2(-580, 256)
@@ -77,16 +86,19 @@ texture = ExtResource("12_dinhu")
 position = Vector2(798, -231)
 
 [node name="Area1" parent="." instance=ExtResource("15_rysoc")]
-position = Vector2(-325, -52)
+position = Vector2(-1344, -52)
 
 [node name="Area2" parent="." instance=ExtResource("11_kvpfn")]
-position = Vector2(-736, -52)
+position = Vector2(-1013, -52)
 
 [node name="Area3" parent="." instance=ExtResource("14_trtic")]
-position = Vector2(-1141, -54)
+position = Vector2(-610, -54)
 
 [node name="Area4" parent="." instance=ExtResource("15_ssvqc")]
-position = Vector2(-1459, -55)
+position = Vector2(-1781, -55)
+
+[node name="Area5" parent="." instance=ExtResource("18_ssvqc")]
+position = Vector2(-2092, -57)
 
 [node name="Player" parent="." instance=ExtResource("1_uwrxv")]
 position = Vector2(201, -48)
@@ -120,7 +132,7 @@ offset_bottom = 40.0
 
 [node name="Label" type="Label" parent="CanvasLayer/Control"]
 visibility_layer = 21
-layout_mode = 2
+layout_mode = 0
 anchor_left = 16.475
 anchor_top = 15.025
 anchor_right = 16.475
@@ -140,6 +152,14 @@ position = Vector2(579, 118)
 scale = Vector2(0.893497, 0.893496)
 texture = ExtResource("4_lbhrr")
 
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(-1905, 0)
+stream = ExtResource("17_rysoc")
+volume_db = 1.0
+autoplay = true
+max_distance = 980.0
+attenuation = 1.54923
+
 [connection signal="body_entered" from="MouthArea" to="." method="_on_mouth_area_body_entered"]
 [connection signal="body_exited" from="MouthArea" to="." method="_on_mouth_area_body_exited"]
 [connection signal="body_entered" from="Area1" to="." method="_on_area1_body_entered"]
@@ -150,3 +170,5 @@ texture = ExtResource("4_lbhrr")
 [connection signal="body_exited" from="Area3" to="." method="_on_area3_body_exited"]
 [connection signal="body_entered" from="Area4" to="." method="_on_area4_body_entered"]
 [connection signal="body_exited" from="Area4" to="." method="_on_area4_body_exited"]
+[connection signal="body_entered" from="Area5" to="." method="_on_area5_body_entered"]
+[connection signal="body_exited" from="Area5" to="." method="_on_area5_body_exited"]
