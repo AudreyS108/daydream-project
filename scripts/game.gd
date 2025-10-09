@@ -33,6 +33,11 @@ extends Node2D
 		"node": $Area4,
 		"speech": $Area4/Sprite2D/Speechbubble2,
 		"held_animation": "Holding4"
+	},
+	"area5": {
+		"node": $Area5,
+		"speech": $Area5/Sprite2D/Speechbubble2,
+		"held_animation": "Holding5"
 	}
 }
 
@@ -74,6 +79,8 @@ func _on_area3_body_entered(body): _on_area_body_entered("area3", body)
 func _on_area3_body_exited(body): _on_area_body_exited("area3", body)
 func _on_area4_body_entered(body): _on_area_body_entered("area4", body)
 func _on_area4_body_exited(body): _on_area_body_exited("area4", body)
+func _on_area5_body_entered(body): _on_area_body_entered("area5", body)
+func _on_area5_body_exited(body): _on_area_body_exited("area5", body)
 
 
 func _on_mouth_area_body_entered(body: Node2D) -> void:
