@@ -1,6 +1,7 @@
-[gd_scene load_steps=21 format=3 uid="uid://dh7rv34hinc6x"]
+[gd_scene load_steps=30 format=3 uid="uid://dh7rv34hinc6x"]
 
 [ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_rl5tc"]
+[ext_resource type="Script" uid="uid://d2rrfajp1poc0" path="res://scenes/scene_other.gd" id="1_u1gkb"]
 [ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_goj8e"]
 [ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_eokbx"]
 [ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_peg12"]
@@ -15,8 +16,13 @@
 [ext_resource type="Texture2D" uid="uid://b6j1bj2pgfbo6" path="res://assets/Sprites/PlayerNormal2.png" id="13_eh1qk"]
 [ext_resource type="Texture2D" uid="uid://cgbnmteyrucud" path="res://assets/Sprites/Player.png" id="14_x63yg"]
 [ext_resource type="Texture2D" uid="uid://dvt1ccp0fw8bn" path="res://assets/Sprites/Player2.png" id="15_8v2ib"]
+[ext_resource type="Texture2D" uid="uid://dsbt83bylmoev" path="res://assets/Sprites/black2.png" id="16_bwm42"]
 [ext_resource type="AudioStream" uid="uid://cmgjaymmsxkfh" path="res://assets/Sounds/cleaned_Lasthotdogleft.mp3" id="17_rl5tc"]
-[ext_resource type="FontFile" uid="uid://35s6lnabdsfb" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="17_vbu0j"]
+[ext_resource type="FontFile" uid="uid://df35d21we4vae" path="res://assets/Fonts/hacked-font/Hacked-KerX.ttf" id="17_u1gkb"]
+[ext_resource type="Texture2D" uid="uid://bwwpfdaxlt2y7" path="res://assets/Sprites/black.png" id="18_eokbx"]
+[ext_resource type="Texture2D" uid="uid://sdr0ntnt0ehl" path="res://assets/Sprites/red.png" id="18_goj8e"]
+[ext_resource type="Texture2D" uid="uid://b2fagdginpn6" path="res://assets/Sprites/red2.png" id="20_peg12"]
+[ext_resource type="AudioStream" uid="uid://dskvbuyxpywsl" path="res://assets/Sounds/electric-buzz-8456.mp3" id="23_wrstm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_tjqub"]
 animations = [{
@@ -119,7 +125,161 @@ animations = [{
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_qkfln"]
 
+[sub_resource type="Animation" id="Animation_eokbx"]
+resource_name = "sacrificeOther"
+length = 10.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Player:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Characters/Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(100, -160), Vector2(-550, -160)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Black2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/3/type = "method"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath(".")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 3.53333, 6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"values": [{
+"args": [],
+"method": &"_playSound"
+}, {
+"args": [],
+"method": &"_playSound2"
+}, {
+"args": [],
+"method": &"_playSound3"
+}]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(2.93333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("UI/Black2/RichTextLabel:visible_ratio")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(6.01, 10.0333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+
+[sub_resource type="Animation" id="Animation_peg12"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Characters/Player:animation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [&"Idle"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Characters/Player:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(100, -160)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("UI/Black2:visible")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("AudioStreamPlayer2D:playing")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("UI/Black2/RichTextLabel:visible_ratio")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bwm42"]
+_data = {
+&"RESET": SubResource("Animation_peg12"),
+&"sacrificeOther": SubResource("Animation_eokbx")
+}
+
 [node name="Scene_other" type="Node2D"]
+script = ExtResource("1_u1gkb")
 
 [node name="Bgfinal2" type="Sprite2D" parent="."]
 position = Vector2(619, 116)
@@ -128,6 +288,7 @@ texture = ExtResource("1_rl5tc")
 
 [node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("2_goj8e")
+volume_db = -8.914
 
 [node name="Characters" type="Node2D" parent="."]
 position = Vector2(414, 650)
@@ -140,10 +301,10 @@ animation = &"Default"
 autoplay = "Default"
 
 [node name="Player" type="AnimatedSprite2D" parent="Characters"]
-position = Vector2(-147, -406)
+position = Vector2(100, -160)
 scale = Vector2(0.551667, 0.551667)
 sprite_frames = SubResource("SpriteFrames_1rsp6")
-animation = &"IdleCutscene"
+animation = &"Idle"
 autoplay = "IdleCutscene"
 
 [node name="StaticBody2D" type="StaticBody2D" parent="."]
@@ -155,43 +316,58 @@ shape = SubResource("WorldBoundaryShape2D_qkfln")
 
 [node name="UI" type="CanvasLayer" parent="."]
 
-[node name="Panel" type="Panel" parent="UI"]
+[node name="Black2" type="Sprite2D" parent="UI"]
 visible = false
-offset_left = 181.0
-offset_top = 50.0
-offset_right = 981.0
-offset_bottom = 200.0
+position = Vector2(562, 191)
+scale = Vector2(1.36084, 1.42154)
+texture = ExtResource("16_bwm42")
 
-[node name="Label" type="Label" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 3.0
-offset_right = 250.0
-offset_bottom = 52.0
-theme_override_font_sizes/font_size = 35
-text = "MOUTH:"
+[node name="RichTextLabel" type="RichTextLabel" parent="UI/Black2"]
+offset_left = -393.14
+offset_top = -120.292
+offset_right = 406.861
+offset_bottom = 342.708
+theme_override_fonts/normal_font = ExtResource("17_u1gkb")
+theme_override_font_sizes/normal_font_size = 48
+text = "GAME OVER
 
-[node name="RichTextLabel" type="RichTextLabel" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 20.0
-offset_top = 41.0
-offset_right = 777.0
-offset_bottom = 174.0
-theme_override_fonts/normal_font = ExtResource("17_vbu0j")
-theme_override_font_sizes/normal_font_size = 28
-text = "Lucky last... I am almost full."
-scroll_active = false
+You live but at what cost?
+ 
+Can you unlock the other ending?
+
+Reload web page to play again
+
+Thanks for playing!"
+horizontal_alignment = 1
 visible_characters = 0
 visible_ratio = 0.0
-
-[node name="Label2" type="Label" parent="UI/Panel"]
-layout_mode = 0
-offset_left = 561.0
-offset_top = 9.0
-offset_right = 789.0
-offset_bottom = 37.0
-theme_override_font_sizes/font_size = 20
-text = "Press Enter to Continue"
+metadata/_edit_use_anchors_ = true
 
 [node name="AudioStreamPlayer2D2" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("17_rl5tc")
+
+[node name="Black" type="Sprite2D" parent="."]
+position = Vector2(1012, 517)
+texture = ExtResource("18_eokbx")
+
+[node name="Red" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.407843)
+position = Vector2(1010, 430)
+texture = ExtResource("18_goj8e")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_bwm42")
+}
+autoplay = "sacrificeOther"
+
+[node name="Red2" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(578, 332)
+scale = Vector2(0.579808, 0.579808)
+texture = ExtResource("20_peg12")
+
+[node name="AudioStreamPlayer2D3" type="AudioStreamPlayer2D" parent="."]
+position = Vector2(641, 116)
+stream = ExtResource("23_wrstm")
+volume_db = 5.0

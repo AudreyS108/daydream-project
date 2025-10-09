@@ -7,9 +7,6 @@ extends Node2D
 
 @onready var audioPLR : AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var audioPLR2 : AudioStreamPlayer2D = $AudioStreamPlayer2D2
-@onready var audioPLR3 : AudioStreamPlayer2D = $AudioStreamPlayer2D3
-
-@onready var bgMusic : AudioStreamPlayer2D = $AudioStreamPlayer1
 
 @onready var button1 : Button = $UI/Panel/Panel1/Button
 
