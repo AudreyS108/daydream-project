@@ -152,7 +152,7 @@ offset_top = -501.569
 offset_right = 97.1257
 offset_bottom = -38.5692
 theme_override_fonts/normal_font = ExtResource("6_h8qup")
-theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/normal_font_size = 45
 text = "GAME OVER
 
 You died but saved another

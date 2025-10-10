@@ -1,10 +1,12 @@
-[gd_scene load_steps=22 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=24 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scripts/game.gd" id="1_kvuet"]
-[ext_resource type="Texture2D" uid="uid://2n5d4tr7xhjt" path="res://assets/Sprites/BGFINAL.jpg" id="1_lnu2h"]
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://kv6k3u3jjuye" path="res://scenes/Cutscene_choice.tscn" id="2_ca42v"]
 [ext_resource type="PackedScene" uid="uid://c2c6ebaepviij" path="res://scenes/Mouth.tscn" id="3_lnu2h"]
+[ext_resource type="Texture2D" uid="uid://ceoessvn8ckdc" path="res://assets/Sprites/pixil-frame-0 (11).png" id="3_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://3wc5pep3etn3" path="res://assets/Sprites/BG.png" id="4_1kice"]
+[ext_resource type="Texture2D" uid="uid://bwwpfdaxlt2y7" path="res://assets/Sprites/black.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://k2y347lvohch" path="res://assets/Sprites/Screenshot_28-9-2025_121635_www.canva.com-removebg-preview.png" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://dea3lfsr5r6cv" path="res://scripts/camera_2d.gd" id="4_u5sy4"]
 [ext_resource type="AudioStream" uid="uid://dhwi5hcpws2t" path="res://assets/Sounds/happy-kids-background-music-364459.wav" id="5_ir15t"]
@@ -34,20 +36,21 @@ distance = -11.0
 script = ExtResource("1_kvuet")
 Choice_Cutscene = ExtResource("2_ca42v")
 
-[node name="Bgfinal4" type="Sprite2D" parent="."]
-position = Vector2(-2576, -555)
-scale = Vector2(1.03926, 1.03926)
-texture = ExtResource("1_lnu2h")
+[node name="BG" type="Sprite2D" parent="."]
+position = Vector2(-897.6666, -553)
+scale = Vector2(1.8866667, 1.8866667)
+texture = ExtResource("3_ssvqc")
 
-[node name="Bgfinal3" type="Sprite2D" parent="."]
-position = Vector2(-1279.67, -543.5)
-scale = Vector2(1.01944, 1.01944)
-texture = ExtResource("1_lnu2h")
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(-896.7295, -545.375)
+scale = Vector2(0.40942818, 0.40942815)
+texture = ExtResource("4_1kice")
 
-[node name="Bgfinal2" type="Sprite2D" parent="."]
-position = Vector2(-2.00002, -542)
-scale = Vector2(1.01667, 1.01667)
-texture = ExtResource("1_lnu2h")
+[node name="Black" type="Sprite2D" parent="."]
+modulate = Color(1, 1, 1, 0.39215687)
+position = Vector2(-809, -837)
+scale = Vector2(1.9790039, 1)
+texture = ExtResource("4_264po")
 
 [node name="Mouth" parent="." instance=ExtResource("3_lnu2h")]
 position = Vector2(816, 72)
@@ -61,7 +64,7 @@ shape = SubResource("WorldBoundaryShape2D_yqjtg")
 [node name="StaticBody2D3" type="StaticBody2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
-position = Vector2(-2841, -400)
+position = Vector2(-2779, -345)
 shape = SubResource("WorldBoundaryShape2D_p57ef")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="."]
@@ -72,7 +75,7 @@ shape = SubResource("WorldBoundaryShape2D_lnu2h")
 
 [node name="AudioStreamPlayer1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_ir15t")
-volume_db = -2.971
+volume_db = -3.5
 autoplay = true
 max_distance = 1400.0
 attenuation = 0.830212
@@ -106,6 +109,7 @@ position = Vector2(201, -48)
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(-102, -48)
 zoom = Vector2(0.8, 0.8)
+limit_left = -2780
 limit_right = 970
 limit_bottom = 0
 limit_smoothed = true
