@@ -1,9 +1,10 @@
-[gd_scene load_steps=30 format=3 uid="uid://dh7rv34hinc6x"]
+[gd_scene load_steps=31 format=3 uid="uid://dh7rv34hinc6x"]
 
 [ext_resource type="Script" uid="uid://d2rrfajp1poc0" path="res://scenes/scene_other.gd" id="1_u1gkb"]
 [ext_resource type="AudioStream" uid="uid://da3c6sr3yvuhn" path="res://assets/Sounds/StartCutsceneAudio.mp3" id="2_goj8e"]
 [ext_resource type="Texture2D" uid="uid://ceoessvn8ckdc" path="res://assets/Sprites/pixil-frame-0 (11).png" id="2_wrstm"]
 [ext_resource type="Texture2D" uid="uid://dk8rp2yhgkhd2" path="res://assets/Sprites/unnamed.png" id="3_eokbx"]
+[ext_resource type="Texture2D" uid="uid://3wc5pep3etn3" path="res://assets/Sprites/BG.png" id="3_j61o6"]
 [ext_resource type="Texture2D" uid="uid://bt3oiwpqn4yjq" path="res://assets/Sprites/unnamed3.png" id="4_peg12"]
 [ext_resource type="Texture2D" uid="uid://1nqs34mfuwi7" path="res://assets/Sprites/unnamed2.png" id="5_bwm42"]
 [ext_resource type="Texture2D" uid="uid://pcb33w1ivho1" path="res://assets/Sprites/unnamed4.png" id="6_u1gkb"]
@@ -286,6 +287,11 @@ position = Vector2(-720.0001, 94.00001)
 scale = Vector2(1.8866667, 1.8866667)
 texture = ExtResource("2_wrstm")
 
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(-721, 98)
+scale = Vector2(0.40942818, 0.40942815)
+texture = ExtResource("3_j61o6")
+
 [node name="Black2" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.39215687)
 position = Vector2(-2628.0002, -769.0002)
@@ -334,7 +340,7 @@ offset_top = -120.292
 offset_right = 406.861
 offset_bottom = 342.708
 theme_override_fonts/normal_font = ExtResource("17_u1gkb")
-theme_override_font_sizes/normal_font_size = 48
+theme_override_font_sizes/normal_font_size = 45
 text = "GAME OVER
 
 You live but at what cost?

@@ -1,10 +1,11 @@
-[gd_scene load_steps=23 format=3 uid="uid://lhoagjgbcmbs"]
+[gd_scene load_steps=24 format=3 uid="uid://lhoagjgbcmbs"]
 
 [ext_resource type="Script" uid="uid://dt6xvox0p11ra" path="res://scripts/game.gd" id="1_kvuet"]
 [ext_resource type="PackedScene" uid="uid://cqxcdhfp1tm65" path="res://scenes/Player.tscn" id="1_uwrxv"]
 [ext_resource type="PackedScene" uid="uid://kv6k3u3jjuye" path="res://scenes/Cutscene_choice.tscn" id="2_ca42v"]
 [ext_resource type="PackedScene" uid="uid://c2c6ebaepviij" path="res://scenes/Mouth.tscn" id="3_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://ceoessvn8ckdc" path="res://assets/Sprites/pixil-frame-0 (11).png" id="3_ssvqc"]
+[ext_resource type="Texture2D" uid="uid://3wc5pep3etn3" path="res://assets/Sprites/BG.png" id="4_1kice"]
 [ext_resource type="Texture2D" uid="uid://bwwpfdaxlt2y7" path="res://assets/Sprites/black.png" id="4_264po"]
 [ext_resource type="Texture2D" uid="uid://k2y347lvohch" path="res://assets/Sprites/Screenshot_28-9-2025_121635_www.canva.com-removebg-preview.png" id="4_lbhrr"]
 [ext_resource type="Script" uid="uid://dea3lfsr5r6cv" path="res://scripts/camera_2d.gd" id="4_u5sy4"]
@@ -40,9 +41,14 @@ position = Vector2(-897.6666, -553)
 scale = Vector2(1.8866667, 1.8866667)
 texture = ExtResource("3_ssvqc")
 
+[node name="Bg" type="Sprite2D" parent="."]
+position = Vector2(-896.7295, -545.375)
+scale = Vector2(0.40942818, 0.40942815)
+texture = ExtResource("4_1kice")
+
 [node name="Black" type="Sprite2D" parent="."]
 modulate = Color(1, 1, 1, 0.39215687)
-position = Vector2(-999, -838)
+position = Vector2(-809, -837)
 scale = Vector2(1.9790039, 1)
 texture = ExtResource("4_264po")
 
@@ -69,7 +75,7 @@ shape = SubResource("WorldBoundaryShape2D_lnu2h")
 
 [node name="AudioStreamPlayer1" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_ir15t")
-volume_db = -2.971
+volume_db = -3.5
 autoplay = true
 max_distance = 1400.0
 attenuation = 0.830212
