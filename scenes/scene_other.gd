@@ -32,6 +32,7 @@ func _playSound2():
 	audioPLR2.stream = load("res://assets/Sounds/nono (1).wav")
 	audioPLR2.play()
 	await get_tree().create_timer(2).timeout
+	audioPLR2.stop()
 	audioPLR3.stream = load("res://assets/Sounds/crunchie mm.mp3")
 	audioPLR3.play()
 
